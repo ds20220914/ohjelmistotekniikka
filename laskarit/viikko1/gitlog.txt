@@ -1,1 +1,20 @@
+commit 7a3209a5ff8352409eb1e383f4b47a73b6579bfc
+Author: shao <junhao.shao@helsinki.fi>
+Date:   Tue Mar 14 22:40:56 2023 +0200
 
+    yritys
+
+ file2           | 0
+ file1 => file22 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5307d67c779d92e7e993dd8f4ed3330039c8ed86
+Author: shao <junhao.shao@helsinki.fi>
+Date:   Tue Mar 14 22:35:24 2023 +0200
+
+    tiedostot luotu oikeen
+
+ file1 | 0
+ file2 | 0
+ file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
