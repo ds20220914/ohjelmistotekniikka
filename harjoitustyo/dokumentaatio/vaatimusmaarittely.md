@@ -12,4 +12,4 @@ Opiskelijat ovat sovelluksen normaalia käyttäjiä. Ja opettajat ovat pääkäy
 
 ## Käyttöliittymäluonnos
 
-![kuva](/home/shao/Downloads/IMG_20230322_230827_edit_436934413923582.jpg)
+![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2001-33-46.png)
