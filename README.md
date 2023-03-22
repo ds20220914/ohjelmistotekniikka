@@ -19,7 +19,8 @@
 
 ## Harjoitustyo
 
-###Dokumentaatio
+### Dokumentaatio
 
 [Vaatimusmäärittely](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/vaatimusmaarittely.md)
+
 [Tunti/työaikakirjanpito](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/tuntikirjanpito.md)
