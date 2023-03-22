@@ -17,3 +17,9 @@
 [unicafe_test](https://github.com/ds20220914/ohjelmistotekniikka/tree/main/laskarit/viikko2/unicafe)
 
 
+## Harjoitustyo
+
+###Dokumentaatio
+
+[Vaatimusmäärittely](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/vaatimusmaarittely.md)
+[Tunti/työaikakirjanpito](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/tuntikirjanpito.md)
