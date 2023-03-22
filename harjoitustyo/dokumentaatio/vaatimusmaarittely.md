@@ -8,8 +8,8 @@ Opettajat voivat muokata opiskelijoiden kurssien tilat sekä antaa opiskelijoill
 
 ## Käyttäjät
 
-Opiskelijat ovat sovelluksen normaali käyttäjiä. Ja opettajat ovat pääkäyttäjiä, joilla on suurempia oikeuksia. 
+Opiskelijat ovat sovelluksen normaalia käyttäjiä. Ja opettajat ovat pääkäyttäjiä, joilla on suurempia oikeuksia. 
 
 ## Käyttöliittymäluonnos
 
-
+![kuva](/home/shao/Downloads/IMG_20230322_230827_edit_436934413923582.jpg)
