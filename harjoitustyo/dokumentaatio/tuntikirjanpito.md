@@ -1,3 +1,3 @@
-päivä		aika		mitä tein
+|päivä|aika|mitä tein
 
-23.3		5 tuntia	sovelluksen vaatimusmäärittely
+|23.3|5 tuntia|sovelluksen vaatimusmäärittely
