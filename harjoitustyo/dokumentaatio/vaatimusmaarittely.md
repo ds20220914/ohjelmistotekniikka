@@ -12,7 +12,7 @@ Opiskelijat ovat sovelluksen normaalia käyttäjiä. Ja opettajat ovat pääkäy
 
 ## Käyttöliittymäluonnos
 
-![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2002-22-05.png)
+![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2003-08-53.png)
 
 Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat siirtyä joko käyttäjän luomisnäkymään 
 tai kirjautua sisään. Kun opiskelijat ovat kirjautunut sisään, ne siirtyvät niiden suorituskokoelmaan joka sisältää
