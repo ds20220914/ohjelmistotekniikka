@@ -12,8 +12,12 @@ Opiskelijat ovat sovelluksen normaalia käyttäjiä. Ja opettajat ovat pääkäy
 
 ## Käyttöliittymäluonnos
 
-![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2001-33-46.png)
+![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2001-56-46.png)
 
-Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat joko luoda uusi käyttäjä tai 
-kirjautua sisään. kun opiskelijat ovat kirjautunut sisään, ne näkevät niiden opintopisteet ja keskiarvo, sekä 
-eri kurssien tiedot. 
+Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat siirtyä joko käyttäjän luomisnäkymään 
+tai kirjautua sisään. Kun opiskelijat ovat kirjautunut sisään, ne siirtyvät niiden suorituskokoelmaan joka sisältää
+kurssilista sekä opintopisteet ja keskiarvo. Kun opettajat ovat kirjautunut sisään, ne siirtyvät hakunäkymään ja
+opiskelijan numeron avulla opiskelijan suorituskokoelman muokkausnäkumään. 
+
+käyttäjät voivat myös siirtyä setting-näkymään kun on kirjautunut sisään ja kirjautua ulos sielä. 
+ 
