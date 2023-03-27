@@ -2,7 +2,7 @@
  classDiagram
       Monopoli_peli <-- User1
       Monopoli_peli <-- User2
-      Monopolipeli  <-- Noppan_summa
+      Monopoli_peli  <-- Noppan_summa
       class Monopoli_peli{
           user1
           user2
