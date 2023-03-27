@@ -1,7 +1,7 @@
 ```mermaid
  classDiagram
       Monopoli_peli <-- User1
-      Monipoli_peli <-- User2
+      Monopoli_peli <-- User2
       class Monopoli_peli{
           username1
           username2
