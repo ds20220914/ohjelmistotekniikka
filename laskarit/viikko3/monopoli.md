@@ -2,13 +2,13 @@
  classDiagram
       Monopoli_peli <-- User1
       Monopoli_peli <-- User2
+      Monopolipeli  <-- Noppan_summa
       class Monopoli_peli{
-          username1
-          username2
-          pelinappula1_sijainti
-          pelinappula2_sijainti
+          user1
+          user2
           pelilauta
           vuoro
+          Noppan_summa
       }
       class User1{
           id
@@ -20,7 +20,11 @@
           id
           pelinappula2_sijainti
           pelinappula2_väri
-            
+     
+      class Noppan_summa{
+          Noppa1
+          Noppa2
+          summa=Noppa1+Noppa2       
       }
 
 ```
