@@ -20,7 +20,7 @@
           id
           pelinappula2_sijainti
           pelinappula2_väri
-     
+     }
       class Noppan_summa{
           Noppa1
           Noppa2
