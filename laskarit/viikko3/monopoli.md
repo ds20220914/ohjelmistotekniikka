@@ -6,20 +6,26 @@
       class Monopoli_peli{
           user1
           user2
+          .....(user< 8)
           pelilauta
           vuoro
           Noppan_summa
       }
-      class User1{
+      class User{
           id
           pelinappula1_sijainti
           pelinappula1_väri
-	  
+	  raha
       }
-      class User2{
-          id
-          pelinappula2_sijainti
-          pelinappula2_väri
+      class pelilauta{
+          aloituspaikka
+          vankila= sijainti_5
+          sattuma_ja_yhteismaa= sijainti_10, sijainti_15, sijainti_4
+          asemat_ja_laitokset
+          kadut1_omistaja
+          kadut2_omistaja
+          kadut3_omistaja
+          
      }
       class Noppan_summa{
           Noppa1
