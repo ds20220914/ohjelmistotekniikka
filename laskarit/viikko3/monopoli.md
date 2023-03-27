@@ -18,10 +18,11 @@
 	  raha
       }
       class pelilauta{
-          aloituspaikka
-          vankila= sijainti_5
-          sattuma_ja_yhteismaa= sijainti_10, sijainti_15, sijainti_4
-          asemat_ja_laitokset
+          nappulan sijainti
+          aloituspaikka=0
+          vankila()=sijainti_5
+          sattuma_ja_yhteismaa()= sijainti_10, sijainti_15, sijainti_4
+          asemat_ja_laitokset=sijainti_11
           kadut1_omistaja
           kadut2_omistaja
           kadut3_omistaja
