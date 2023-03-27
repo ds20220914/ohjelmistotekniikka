@@ -1,12 +1,12 @@
 ```mermaid
  classDiagram
-      Monopoli_peli <-- User1
-      Monopoli_peli <-- User2
+      Monopoli_peli <-- User
+      Monopoli_peli <-- pelilauta
       Monopoli_peli  <-- Noppan_summa
       class Monopoli_peli{
           user1
           user2
-          .....(user< 8)
+          user3.....user< 8
           pelilauta
           vuoro
           Noppan_summa
