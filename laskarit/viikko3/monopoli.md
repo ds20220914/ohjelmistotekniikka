@@ -1,11 +1,11 @@
 ```mermaid
  classDiagram
-      Todo "*" --> "1" User
-      class User{
+      Monopoli_peli <-- User
+      class Monopoli_peli{
           username
           password
       }
-      class Todo{
+      class User{
           id
           content
           done
