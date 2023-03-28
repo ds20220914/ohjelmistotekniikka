@@ -18,7 +18,12 @@
 
 ### viikko 3
 
-[]
+[sekvenssikaavio](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/sekvenssikaavio.png)
+
+[laajempisekvenssikaavio](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/laajempisekvenssikaavio.png)
+
+[monopoli_peli](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/monopoli.md)
+
 ## Harjoitustyo
 
 ### Dokumentaatio
