@@ -1,7 +1,7 @@
 import unittest
 from entities.user import User
 from service.studyMonitoring_services import Services
-from repository.user_repository  import UserRepository
+from repository.user_repository  import user_repository
 from build import build	
 
 class TestUser(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
 
 	def test_create_user(self):
 		user=User("moi","1234","A2222")
-		UserRepository.create(self.user_eka)
-		lista=UserRepository.find_all()
+		user_repository.create(self.user_eka)
+		lista=user_repository.find_all()
 		self.assertEqual(user.username,"moi")
 		

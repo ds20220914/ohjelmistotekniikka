@@ -15,5 +15,5 @@ def initialize_database():
 	get=get_database_connection()
 	remove_tables(get)
 	create_tables(get)
-	return 9
+	
 
