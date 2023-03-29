@@ -6,6 +6,6 @@ class User:
 		self.password=password
 		self.role_number=number
 		if self.role_number[0]=="A":
-			self.role=student
+			self.role="student"
 		if self.role_number[0]=="B":
-			self.role=teacher
+			self.role="teacher"

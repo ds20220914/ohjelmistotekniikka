@@ -9,10 +9,11 @@ def remove_tables(get):
 
 def create_tables(get):
 	db=get.cursor()
-	db.execute("CREATE TABLE User (id INTEGER PRIMARY KEY, User_name TEXT, password TEXT,role_number INTEGER ) ")
+	db.execute("CREATE TABLE User (id INTEGER PRIMARY KEY, User_name TEXT, password TEXT,role_number TEXT ) ")
 	get.commit()
 def initialize_database():
 	get=get_database_connection()
 	remove_tables(get)
 	create_tables(get)
+	return 9
 

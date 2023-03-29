@@ -3,6 +3,7 @@ from database_initialization import initialize_database
 
 def build():
 
-	initialize_database()
+	luku=initialize_database()
+	return luku
 if __name__ == "__main__":
     build()
