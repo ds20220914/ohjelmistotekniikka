@@ -16,8 +16,8 @@ class UserRepository:
 		self._connection1.commit()
 		return User
 	def find_all(self):
-		db=self._get.cursor()
-		lista=self._get.execute("SELECT * FROM User ").fetchall()
+		db=self._connection1.cursor()
+		lista=self._connection1.execute("SELECT * FROM User ").fetchall()
 		return list(lista)
 		
-user_repository=UserRepository(get_database_connection)
+user_repository=UserRepository(get_database_connection())

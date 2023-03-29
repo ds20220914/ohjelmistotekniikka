@@ -1,8 +1,7 @@
 import unittest
 from entities.user import User
-from service.studyMonitoring_services import Services
 from repository.user_repository  import user_repository
-from build import build	
+
 
 class TestUser(unittest.TestCase):
 	def setUp(self):
