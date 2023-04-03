@@ -8,4 +8,8 @@ def build(ctx):
 	
 @task
 def test(ctx):
-    ctx.run("pytest src", pty=True)
+	ctx.run("pytest src", pty=True)
+
+@task
+def start(ctx):
+	ctx.run("python3 src/main.py",pty=True)
