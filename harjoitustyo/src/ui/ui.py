@@ -2,7 +2,7 @@ from tkinter import Tk, ttk
 from ui.login_view import LoginView
 
 class UI:
-	def __init__(self,frame):
+	def __init__(self,root):
 		self._root=root
 		self._current_view= None
 		
