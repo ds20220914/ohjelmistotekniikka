@@ -1,10 +1,12 @@
-from tkinter import ttk, constants		
+from tkinter import ttk, constants
+	
 class LoginView:
 	def __init__(self,root,close_login_view):
 		self._root=root
 		self._close_login_view=close_login_view
 		self._frame=None
 		self._initialize()
+		self.username_label = None
 
 
 	def pack(self):
@@ -17,6 +19,7 @@ class LoginView:
 		self._frame=ttk.Frame(master=self._root)
 		heading= ttk.Label(master=self._frame, text="welcome")
 		username_label=ttk.Label(master=self._frame,text="Username")
+		
 		username_entry=ttk.Entry(master=self._frame)
 		password_label = ttk.Label(master=self._frame, text="Password")
 		password_entry = ttk.Entry(master=self._frame)
