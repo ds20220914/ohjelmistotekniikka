@@ -36,11 +36,11 @@
 
 ### 1. Asenna riippuvuuden komennolla:
 
-### poetry install
+*poetry install*
 
 ### 2. Käynnistä sovellus:
 
-### poetry run invoke start 
+*poetry run invoke start* 
 
 # Komentorivitoiminnot
 
