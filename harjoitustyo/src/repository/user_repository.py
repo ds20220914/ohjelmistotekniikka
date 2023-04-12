@@ -1,13 +1,14 @@
 from entities.user import User
 from database_connection import get_database_connection
+from database_connection import get_course_connection
 
 
 
 class UserRepository:
-	def __init__(self, connection1):
+	def __init__(self, connection1,connection2):
 
 		self._connection1=connection1
-
+		self._connection2=connection2
 
 	def create(self, User):
 		 
@@ -17,7 +18,10 @@ class UserRepository:
 		return User
 	def find_all(self):
 		db=self._connection1.cursor()
-		lista=self._connection1.execute("SELECT * FROM User ").fetchall()
+		lista=db.execute("SELECT * FROM User ").fetchall()
 		return list(lista)
 		
-user_repository=UserRepository(get_database_connection())
+	
+		
+user_repository=UserRepository(get_database_connection(),get_course_connection())
+
