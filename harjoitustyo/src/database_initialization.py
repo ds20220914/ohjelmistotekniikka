@@ -14,14 +14,14 @@ def create_tables(get):
 	get.commit()
 
 def remove_tables1(get1):
-	db=get.cursor()
-	db.execute("DROP TABLE if exists Course ")
-	get.commit()
+	db1=get1.cursor()
+	db1.execute("DROP TABLE if exists Course ")
+	get1.commit()
 
 def create_tables1(get1):
-	db=get.cursor()
-	db.execute("CREATE TABLE Course (id INTEGER PRIMARY KEY, Role_number INTEGER,Course_name TEXT, grade INTEGER, credit INTEGER ) ")
-	get.commit()
+	db1=get1.cursor()
+	db1.execute("CREATE TABLE Course (id INTEGER PRIMARY KEY, Role_number INTEGER,Course_name TEXT, grade INTEGER, credit INTEGER ) ")
+	get1.commit()
 
 
 
