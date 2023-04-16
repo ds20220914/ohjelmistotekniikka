@@ -10,12 +10,19 @@ class Services:
 		return user
 		
 	def find_by_rolenumber(self,rolenumber):
-		lista1=[]
-		lista=course_repository.find_all_course()
-		for i in lista:
-			if i["Role_number"]==rolenumber:
-				lista1.append(i)
-		return lista1
 
+		lista=course_repository.find_all_course_by_Student_role_number(rolenumber)
+		
+		return lista
+		
+	def find_by_coursename_rolenumber(self,rolenumber,course_name):
+		lista=course_repository.find_all_course_by_Student_role_number(rolenumber)
+		for i in lista:
+			if course_name==i["Course_name"]:
+				return False
+		return True
+		
+			
+	
 
 

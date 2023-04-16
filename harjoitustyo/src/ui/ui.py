@@ -1,11 +1,13 @@
 from tkinter import Tk, ttk
 from ui.login_view import LoginView
 from ui.teacher_view import TeacherView
+from ui.teacher_view1 import TeacherView1
 from ui.student_view import StudentView
+from ui.new_course_view import NewCourseView
 from ui.Create_user_view import Create_user
 from database_connection import get_database_connection
 from repository.user_repository import user_repository
-
+from service.studyMonitoring_services import Services
 
 class UI:
 	def __init__(self,root):
@@ -28,7 +30,7 @@ class UI:
 			lista=user_repository.find_all()
 			for i in lista:
 				if username==i["User_name"] and password==i["password"]:
-					self._current_view=TeacherView(self._root)
+					self._current_view=TeacherView(self._root,self.check_student,self.add_new_course)
 
 					self._current_view.pack()
 		if username[0]=="B":
@@ -56,6 +58,27 @@ class UI:
 
 		self._current_view.pack()
 		
+	def check_student(self):
+		number=self._current_view.rolenumber_entry.get()
+		array=Services()
+		array1=array.find_by_rolenumber(number)
+		oikea=None
+		if len(array1)==0:
+			oikea=False
+		if len(array1)!=0:
+			oikea=True
+		self._current_view.destroy()
+		self._current_view=TeacherView1(self._root,oikea,number)
+		self._current_view.pack()
+	
+	def add_new_course(self):
+		self._current_view.destroy()
+		self._current_view=NewCourseView(self._root)
+		self._current_view.pack()
+		
+	
+		
+	
 	
 	
 		
