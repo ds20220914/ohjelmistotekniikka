@@ -13,6 +13,7 @@ connection_course.row_factory = sqlite3.Row
 
 def get_database_connection():
     return connection
-    
+
+
 def get_course_connection():
     return connection_course
