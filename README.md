@@ -46,4 +46,4 @@
 
 ### Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
 
-*poetry run invoke pylint*
+*poetry run invoke lint*
