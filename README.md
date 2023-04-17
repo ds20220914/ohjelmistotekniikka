@@ -1,28 +1,3 @@
-# ohjelmistotekniikka
-
-## Laskarit
-
-### viikko 1
-
-[gitlog.txt](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko1/komentorivi.txt)
-
-### viikko 2
-
-[testikattavuus_raport](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko2/testikattavuus_kuva.png)
-
-[maksukortti_test](https://github.com/ds20220914/ohjelmistotekniikka/tree/main/laskarit/viikko2/maksukortti)
-
-[unicafe_test](https://github.com/ds20220914/ohjelmistotekniikka/tree/main/laskarit/viikko2/unicafe)
-
-### viikko 3
-
-[sekvenssikaavio](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/sekvenssikaavio.png)
-
-[laajempisekvenssikaavio](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/laajempisekvenssikaavio.png)
-
-[monopoli_peli](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/laskarit/viikko3/monopoli.md)
 
 ## Harjoitustyo
 
@@ -31,6 +6,9 @@
 [Vaatimusmäärittely](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/vaatimusmaarittely.md)
 
 [Tunti/työaikakirjanpito](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/tuntikirjanpito.md)
+
+[changelog](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/changelog.md)
+
 
 # Asennus
 

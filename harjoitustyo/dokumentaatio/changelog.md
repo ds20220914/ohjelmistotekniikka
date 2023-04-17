@@ -7,3 +7,14 @@
 - Sisäänkirjautusnäkymä luotu
 - Lisätty Smonitoring_service luokka
 - Lisätty ui hakemisto sekä UI luokka ja LoginView luokka 
+
+## Viikko 4
+
+- "Opettajien" sisäänkirjautuminen onnistuu
+- "Opettajiat" voivat lisätä "opiskelijoille" suoritustiedot
+- "Opettajat" voivat tarkistaa tietyn "opiskelijan" kaikki suoritetut kurssit
+- pylint otettu käyttöön
+- testikattavuus nousee
+- "opettajille" luotu lisää näkymiä
+
+ 
