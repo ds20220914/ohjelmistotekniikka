@@ -1,0 +1,10 @@
+.pytest_cache
+__pycache__
+
+.coverage
+htmlcov
+
+data/Smonitoringdatabase.sqlite
+data/Course_database.sqlite
+data/test-Smonitoringdatabase.sqlite
+data/test-Course_database.sqlite
