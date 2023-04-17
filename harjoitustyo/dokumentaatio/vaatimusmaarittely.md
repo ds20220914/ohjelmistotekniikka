@@ -25,18 +25,18 @@ käyttäjät voivat myös siirtyä setting-näkymään kun on kirjautunut sisä�
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi luoda uuden käyttäjätunnus järjestelmään
-  - Käyttäjätunnus täytyy olla uniikki
-  - Samalla pitää keksiä salasana ja antaa oman opiskelijanumeron
-- Käyttäjä voi kirjautua järjestelmään
-  - Kirjautuminen onnistuu syöttämällä oikea käyttäjätunnus ja salasana 
-  - Jos salasana tai käyttäjätunnus on väärin, kijautuminen epäonnistuu ja tästä ilmoitetaan järjestelmälle
+- Käyttäjä voi luoda uuden käyttäjätunnus järjestelmään "tehty"
+  - Käyttäjätunnus täytyy olla uniikki   "tehty"
+  - Samalla pitää keksiä salasana ja antaa oman opiskelijanumeron "tehty"
+- Käyttäjä voi kirjautua järjestelmään "tehty"
+  - Kirjautuminen onnistuu syöttämällä oikea käyttäjätunnus ja salasana "tehty" 
+  - Jos salasana tai käyttäjätunnus on väärin, kijautuminen epäonnistuu ja tästä ilmoitetaan järjestelmälle "tehty"
 
 ### Kirjautumisen jälkeen
 
 - Opiskelijat eli normaalit käyttäjät näkevät omat suoritustiedot
   - Painamalla "setting" normaalit käyttäjät pääsevät näkemään oman käyttäjätiedon. 
 - Opettajat eli pääkäyttäjät voivat etsiä opiskelijanumeron avulla tietyn opiskelijan suoritustiedot ja muokkaa
-  niitä(uuden kurssin lisääminen, kurssin arvosanan antaaminen). 
+  niitä(uuden kurssin lisääminen, kurssin arvosanan antaaminen). "tehty"
   - Painamalla "setting" pääkäyttäjät pääsevät näkemään oman käyttäjätiedon. 
 - käyttäjät voivat kirjautua ulos painamalla ensin "setting" ja sitten "logout". 

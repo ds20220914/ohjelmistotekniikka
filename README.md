@@ -42,4 +42,8 @@
 
 ### Raportti generoituu htmlcov-hakemistoon
 
+## pylint
 
+### Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:
+
+*poetry run invoke pylint*
