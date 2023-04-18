@@ -33,3 +33,4 @@ Toiminnallisista kokonaisuuksista vastaa Services-luokka. Luokka tarjoaa käytt�
 - find_by_coursename_rolenumber(rolenumber, course_name)
 Services pysty hyödyntää käyttäjien ja kurssisuorituksien tietoja niiden tallennuksesta vastaavan pakkauksessa repositories sijaitsevien luokkien UserRepository ja CourseRepository kautta.
 
+![image](https://user-images.githubusercontent.com/123125841/232852927-8929ff2e-c666-4fd2-9dc6-5b5e449fee65.png)
