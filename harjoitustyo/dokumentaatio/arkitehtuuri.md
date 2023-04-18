@@ -3,6 +3,7 @@
 ## Rakenne
 
 Ohjelman rakenne on kolmetasoista kerrosarkitehtuuria, koodin pakkausrakenne on seuraava:
+![image](https://user-images.githubusercontent.com/123125841/232858513-9cde1e88-860d-4e3c-b81d-42232314dd61.png)
 
 Pakkaus ui sisältää koodeja käyttöliitymästä, pakkaus repository sisältää koodeja tietokannan muokkaamisesta(esim. tiedon lisääminen,etsiminen),
 pakkaus service sisältää opintoseurantajärjestelmän sovelluslogiikka ja palveluja, pakkaus entities sisältää luokat, jotka kuvastavat eri käyttäjäosapuolet.
