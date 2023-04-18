@@ -24,6 +24,7 @@ Se kutsuu studyMonitoring_services.py:n Services-luokan metodeja sekä CourseRep
 Sovelluksen loogisen tietomallin muodostavat luokat User ja Course, jotka kuvaavat käyttäjiä ja käyttäjien kursseja. 
 Käyttäjän rooli voi olla joko opiskelija tai opettaja sen käyttäjänimen mukaan. 
 
+![image](https://user-images.githubusercontent.com/123125841/232853146-d382fe93-52f0-49f0-8166-0c89283995e9.png)
 
 
 Toiminnallisista kokonaisuuksista vastaa Services-luokka. Luokka tarjoaa käyttäjäliittymän toiminnolla oma metodi:
