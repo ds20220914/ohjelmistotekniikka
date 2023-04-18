@@ -60,7 +60,7 @@ class Create_user:
         create = ttk.Button(master=self._frame, text="Register",
                             command=self.check_create_user)
         last_label = ttk.Label(
-            master=self._frame, text="The first alphabet of the username has to be A if you are student, B if you are teacher.")
+            master=self._frame, text="The first alphabet of the username has to be B if you are student, A if you are teacher.")
 
         username_label.grid(row=1, column=0, sticky=(constants.E, constants.W))
         self.username_entry.grid(

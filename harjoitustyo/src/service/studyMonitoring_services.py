@@ -9,6 +9,16 @@ class Services:
 
         user = user_repository.create(User(name, password, role_number))
         return user
+        
+    def find_course_by_username(self,username):
+        rolenumber = user_repository.find_by_username(
+            username)
+        number=None
+        for i in rolenumber:
+            number=i["role_number"]
+        lista=course_repository.find_all_course_by_student_role_number(
+            number)
+        return lista
 
     def find_by_rolenumber(self, rolenumber):
 

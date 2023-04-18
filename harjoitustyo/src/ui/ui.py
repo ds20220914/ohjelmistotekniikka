@@ -23,6 +23,7 @@ class UI:
     def close_login_view(self):
         username = self._current_view.username_entry.get()
         password = self._current_view.password_entry.get()
+        
         self._current_view.destroy()
         luku = Services()
         luku2 = luku.login(username, password)
@@ -35,7 +36,7 @@ class UI:
             self._current_view.pack()
         if luku2 == 2:
             self._current_view = StudentView(
-                self._root, self.start_login_view)
+                self._root, self.start_login_view,username)
 
             self._current_view.pack()
         else:

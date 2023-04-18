@@ -19,6 +19,11 @@ class UserRepository:
         db_connection = self._connection1.cursor()
         lista = db_connection.execute("SELECT * FROM User ").fetchall()
         return list(lista)
+    def find_by_username(self,username):
+        db_connection = self._connection1.cursor()
+        lista = db_connection.execute("SELECT * FROM User WHERE User_name=?",(username,)).fetchall()
+        if len(lista)!=0:
+        	return lista
 
 
 user_repository = UserRepository(
