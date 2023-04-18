@@ -9,6 +9,7 @@
 
 [changelog](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/changelog.md)
 
+[arkitehtuuri](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/arkitehtuuri.md)
 
 # Asennus
 
