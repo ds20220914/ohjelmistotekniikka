@@ -12,8 +12,8 @@ class CourseRepository:
     def create_course(self, role_number, course):
         db_connection = self._connection2.cursor()
         db_connection.execute("INSERT INTO Course (Role_number, Course_name, grade, credit) "
-                   "VALUES (?, ?, ?, ?)",
-                   (role_number, course.course_name, course.grade, course.credits))
+                              "VALUES (?, ?, ?, ?)",
+                              (role_number, course.course_name, course.grade, course.credits))
         self._connection2.commit()
         return User
 

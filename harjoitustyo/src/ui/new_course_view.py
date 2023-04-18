@@ -29,23 +29,26 @@ class NewCourseView:
         result = Services()
         result1 = result.find_by_coursename_rolenumber(rolenumber, course_name)
         if result1 == False:
-            error_label=ttk.Label(master=self._frame, text=" course information already added")
-            error_label.grid(row=6, column=0, sticky=(constants.E, constants.W))
-            self.rolenumber_entry.delete(0,"end")
+            error_label = ttk.Label(
+                master=self._frame, text=" course information already added")
+            error_label.grid(row=6, column=0, sticky=(
+                constants.E, constants.W))
+            self.rolenumber_entry.delete(0, "end")
             self.course_name_entry.delete(0, "end")
             self.grade_entry.delete(0, "end")
             self.credit_entry.delete(0, "end")
-            
+
         if result1 == True:
             course = Course(course_name, credit, grade)
-            course_repository.create_course(rolenumber, course)
-            error_label=ttk.Label(master=self._frame, text=" course information added")
-            error_label.grid(row=6, column=0, sticky=(constants.E, constants.W))
-            self.rolenumber_entry.delete(0,"end")
+            result.add_new_course(rolenumber, course)
+            error_label = ttk.Label(
+                master=self._frame, text=" course information added")
+            error_label.grid(row=6, column=0, sticky=(
+                constants.E, constants.W))
+            self.rolenumber_entry.delete(0, "end")
             self.course_name_entry.delete(0, "end")
             self.grade_entry.delete(0, "end")
             self.credit_entry.delete(0, "end")
-            
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)

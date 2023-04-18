@@ -24,3 +24,18 @@ class Services:
             if course_name == i["Course_name"]:
                 return False
         return True
+
+    def login(self, username, password):
+        if username[0] == "A":
+            lista = user_repository.find_all()
+            for i in lista:
+                if username == i["User_name"] and password == i["password"]:
+                    return 1
+        if username[0] == "B":
+            lista = user_repository.find_all()
+            for i in lista:
+                if username == i["User_name"] and password == i["password"]:
+                    return 2
+
+    def add_new_course(self, rolenumber, course):
+        course_repository.create_course(rolenumber, course)

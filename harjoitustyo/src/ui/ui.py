@@ -24,22 +24,20 @@ class UI:
         username = self._current_view.username_entry.get()
         password = self._current_view.password_entry.get()
         self._current_view.destroy()
-        if username[0] == "A":
-            lista = user_repository.find_all()
-            for i in lista:
-                if username == i["User_name"] and password == i["password"]:
-                    self._current_view = TeacherView(
-                        self._root, self.check_student, self.add_new_course)
+        luku = Services()
+        luku2 = luku.login(username, password)
 
-                    self._current_view.pack()
-        if username[0] == "B":
-            lista = user_repository.find_all()
-            for i in lista:
-                if username == i["User_name"] and password == i["password"]:
-                    self._current_view = StudentView(
-                        self._root, self.start_login_view)
+        if luku2 == 1:
 
-                    self._current_view.pack()
+            self._current_view = TeacherView(
+                self._root, self.check_student, self.add_new_course)
+
+            self._current_view.pack()
+        if luku2 == 2:
+            self._current_view = StudentView(
+                self._root, self.start_login_view)
+
+            self._current_view.pack()
         else:
             pass
 
