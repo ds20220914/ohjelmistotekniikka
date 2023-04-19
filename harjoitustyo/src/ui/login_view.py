@@ -2,10 +2,11 @@ from tkinter import ttk, constants
 
 
 class LoginView:
-    def __init__(self, root, close_login_view, create_user_view):
+    def __init__(self, root, close_login_view, create_user_view,oikea):
         self._root = root
         self._close_login_view = close_login_view
         self._create_user_view = create_user_view
+        self.oikea=oikea
         self._frame = None
         self.username_entry = None
         self.password_entry = None
@@ -41,5 +42,8 @@ class LoginView:
                    sticky=(constants.E, constants.W))
         create.grid(row=4, column=0, columnspan=2,
                     sticky=(constants.E, constants.W))
-
+        if self.oikea==False:
+            error_label= ttk.Label(master=self._frame, text="Login error")
+            error_label.grid(row=5, column=0, sticky=(constants.E, constants.W))
+        
         self._frame.grid_columnconfigure(1, weight=1)

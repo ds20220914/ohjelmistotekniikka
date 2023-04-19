@@ -2,12 +2,11 @@ from tkinter import ttk, constants
 from service.studyMonitoring_services import Services
 
 class StudentView:
-    def __init__(self, root, logout,username):
+    def __init__(self, root,logout,username):
         self._root = root
         self._logout = logout
         self._frame = None
         self.username=username
-
         self._initialize()
 
     def pack(self):

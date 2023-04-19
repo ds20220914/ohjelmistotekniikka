@@ -5,9 +5,9 @@ from entities.course import Course
 
 
 class NewCourseView:
-    def __init__(self, root):
+    def __init__(self, root,logout):
         self._root = root
-
+        self.logout=logout
         self._frame = None
         self.rolenumber_entry = None
         self.grade_entry = None
@@ -28,6 +28,7 @@ class NewCourseView:
         grade = self.grade_entry.get()
         result = Services()
         result1 = result.find_by_coursename_rolenumber(rolenumber, course_name)
+        
         if result1 == False:
             error_label = ttk.Label(
                 master=self._frame, text=" course information already added")
@@ -65,6 +66,8 @@ class NewCourseView:
 
         add = ttk.Button(
             master=self._frame, text="Add course performance", command=self.check_course)
+        logout = ttk.Button(master=self._frame, text="Logout",
+                           command=self.logout)
 
         rolenumber_label.grid(
             row=1, column=0, sticky=(constants.E, constants.W))
@@ -82,5 +85,7 @@ class NewCourseView:
             row=4, column=1, sticky=(constants.E, constants.W))
         add.grid(row=5, column=0, columnspan=2,
                  sticky=(constants.E, constants.W))
+        logout.grid(row=7, column=0, columnspan=2,
+                    sticky=(constants.E, constants.W))
 
         self._frame.grid_columnconfigure(1, weight=1)
