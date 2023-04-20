@@ -9,8 +9,8 @@ except FileNotFoundError:
     pass
 
 DATABASE_FILENAME = os.getenv(
-    "Smonitoring_database") or "Smonitoringdatabase.sqlite"
+     "DATABASE_FILENAME") or "Smonitoringdatabase.sqlite"
 DATABASE_FILE_PATH = os.path.join(dirname, "..", "data", DATABASE_FILENAME)
 
-COURSE_LIST_FILENAME = os.getenv("Course_database") or "Course_database.sqlite"
+COURSE_LIST_FILENAME = os.getenv("COURSE_LIST_FILENAME") or "Course_database.sqlite"
 DATABASE_FILE_PATH1 = os.path.join(dirname, "..", "data", COURSE_LIST_FILENAME)
