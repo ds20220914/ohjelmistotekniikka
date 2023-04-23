@@ -17,4 +17,11 @@
 - testikattavuus nousee
 - "opettajille" luotu lisää näkymiä
 
- 
+## Viikko 5
+
+- "Oppilaan" sisäänkirjautumisen näkymä luotu
+- "Oppilaan" sisäänkirjautuminen onnistuu
+- "Oppilaat" näkeevät omien kurssitiedot
+- testikattavuus nousi
+- pylint virheitä on korjattu
+- osa "opettajien" toiminnan virheilmoitukset on lisätty 

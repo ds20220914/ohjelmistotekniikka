@@ -1,6 +1,7 @@
 from repository.user_repository import user_repository
-from entities.user import User
 from repository.course_repository import course_repository
+from entities.user import User
+
 
 
 class Services:
@@ -9,14 +10,14 @@ class Services:
 
         user = user_repository.create(User(name, password, role_number))
         return user
-        
-    def find_course_by_username(self,username):
+
+    def find_course_by_username(self, username):
         rolenumber = user_repository.find_by_username(
             username)
-        number=None
+        number = None
         for i in rolenumber:
-            number=i["role_number"]
-        lista=course_repository.find_all_course_by_student_role_number(
+            number = i["role_number"]
+        lista = course_repository.find_all_course_by_student_role_number(
             number)
         return lista
 
@@ -41,7 +42,7 @@ class Services:
             for i in lista:
                 if username == i["User_name"] and password == i["password"]:
                     return 1
-        if username[0] == "B":
+        elif username[0] == "B":
             lista = user_repository.find_all()
             for i in lista:
                 if username == i["User_name"] and password == i["password"]:

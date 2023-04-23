@@ -1,4 +1,4 @@
-from service.studyMonitoring_services import Services
+from service.studymonitoring_services import Services
 import unittest
 from repository.user_repository import user_repository
 from entities.user import User

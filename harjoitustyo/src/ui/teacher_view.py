@@ -1,16 +1,16 @@
 from tkinter import ttk, constants
-from service.studyMonitoring_services import Services
+from service.studymonitoring_services import Services
 
 
 class TeacherView:
-    def __init__(self, root, check, add_new_course,logout):
+    def __init__(self, root, check, add_new_course, logout):
         self._root = root
         self.check_student = check
         self.add_new_course = add_new_course
         self._frame = None
         self.rolenumber_entry = None
         self.view = None
-        self.logout=logout
+        self.logout = logout
         self._initialize()
 
     def pack(self):
@@ -33,7 +33,7 @@ class TeacherView:
         search = ttk.Button(master=self._frame, text="Search",
                             command=self.check_student)
         logout = ttk.Button(master=self._frame, text="Logout",
-                           command=self.logout)
+                            command=self.logout)
         rolenumber_label.grid(
             row=1, column=0, sticky=(constants.E, constants.W))
         self.rolenumber_entry.grid(

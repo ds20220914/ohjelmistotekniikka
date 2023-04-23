@@ -8,4 +8,8 @@
 |11.4 | 4 tuntia | "opettajat" voivat lisätä "opiskelijoiden" suoritustietoja |
 |13.4 | 4 tuntia | "opettajat" voivat tarkista tietyn opiskelijan kaikki suoritustietoja sekä pylint otettu käyttöön |
 |14.4 | 2 tuntia | nostaa testikattavuus |
-yhteismäärä  30 tuntia
+|21.4 | 6 tuntia | testit ja testien tietokannan luominen, pylint virheiden korjaaminen, sekä ohjelman error ilmoituksen lisääminen |
+|22.4 | 5 tuntia | "oppilaan" sisäänkirjautuminen luotu ja näyttää "oppilaan"kurssitiedot|
+
+
+yhteismäärä  41 tuntia

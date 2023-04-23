@@ -1,15 +1,15 @@
 from tkinter import ttk, constants
-from service.studyMonitoring_services import Services
+from service.studymonitoring_services import Services
 
 
 class TeacherView1:
-    def __init__(self, root, oikea, number,logout):
+    def __init__(self, root, oikea, number, logout):
         self._root = root
         self.oikea = oikea
         self.number = number
         self._frame = None
         self.rolenumber_entry = None
-        self.logout=logout
+        self.logout = logout
         self._initialize()
 
     def pack(self):
@@ -21,7 +21,7 @@ class TeacherView1:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
         logout = ttk.Button(master=self._frame, text="Logout",
-                           command=self.logout)
+                            command=self.logout)
         if self.oikea == False:
             course_label = ttk.Label(
                 master=self._frame, text="No course added")
@@ -49,7 +49,6 @@ class TeacherView1:
                 course_label2.grid(row=i+2, column=1)
                 course_label3.grid(row=i+2, column=2)
             logout.grid(row=len(array1)+2, column=0, columnspan=2,
-                    sticky=(constants.E, constants.W))
-
+                        sticky=(constants.E, constants.W))
 
         self._frame.grid_columnconfigure(1, weight=1)

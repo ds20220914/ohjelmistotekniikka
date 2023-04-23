@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from service.studyMonitoring_services import Services
+from service.studymonitoring_services import Services
 from entities.user import User
 from repository.user_repository import user_repository
 from database_connection import get_database_connection
