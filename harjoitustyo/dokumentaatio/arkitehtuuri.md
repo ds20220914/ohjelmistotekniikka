@@ -54,3 +54,20 @@ Sen jälkeen ohjelma toimii seuraavasti:
 Kun käyttäjä on painanut "login" painike, ohjelma kutsuu sovelluslogiikan Services metodia login ja antaa parametriksi käyttäjätunnus ja salasana. Sen jälkeen sovelluslogiikka kutsuu UserRepository, ja sen avulla selvittää onko käyttäjätunnus ja salasana oikea. 
 Jos salasana ja käyttäjätunnus on oikea, sitten UserRepository määrittää käyttäjätunnuksen perusteella, että onko käyttäjä "opettaja" vai "oppilas".
 Ja sitten sen perusteella käyttöliittymä antaa joko TeacherView eli "opettajan" näkymä tai StudentView eli "oppilaiden" näkymä. 
+
+### Uuden käyttäjän luominen
+
+Kun käyttäjä painaa "Register"-painike uuden käyttäjän luomisnäkymässä, ohjelma toimii seuraavasti:
+
+Tapahtumakäsittelijä kutsuu UserRepository, ja selvittää sen find_all metodin avulla, onko käyttäjänimi jo olemassa. Jos ei ole, niin tapahtumakäsittelijä kutsuu
+sovelluslogiikan metodia new_user, joka kutsuu UserRepository:n metodi create, ja sen avulla tallentaa uuden käyttäjän käyttäjätunnus, salasana ja rolenumber. Jos uuden käyttäjän luonti onnistuu, ohjelma palaa automaattisesti kirjautumisnäkymään, jos luominen ei onnistu, ohjelma ilmoittaa error viesti. 
+
+### Kurssisuorituksen lisääminen
+
+"Oppilaiden" kurssisuorituksen lisääminen onnistuu ainoastaan "opettajilla". Suorituksen lisämisnäkymä pääsee klikkaamalla "add new course". 
+Kun "opettajat" ovat täydentänyt "oppilaan" rolenumber ja suoritustiedot, klikkaamalla "add course performance" sovelluksen kontrolli toimii seuraavasti:
+
+
+Tapahtumakäsittelijä kutsuu sovelluslogiikan metodi find_by_coursename_rolenumber, joka kutsuu CourseRepository:n metodi find_all_course_by_student_rolenumber ja palauttaa lista kyseisen oppilaan suoritustiedoista. Jos tämä uusi suoritustieto ei ole listassa, niin tapahtumakäsittelijä kutsuu sovelluslogiikasta add_new_course joka taas kutsuu CourseRepository:sta metodi create_course, joka lisää kyseisen oppilaan suoritustieto tietokantaan.  
+
+ 
