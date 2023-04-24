@@ -36,3 +36,19 @@ Toiminnallisista kokonaisuuksista vastaa Services-luokka. Luokka tarjoaa käytt�
 Services pysty hyödyntää käyttäjien ja kurssisuorituksien tietoja niiden tallennuksesta vastaavan pakkauksessa repositories sijaitsevien luokkien UserRepository ja CourseRepository kautta.
 
 ![image](https://user-images.githubusercontent.com/123125841/232852927-8929ff2e-c666-4fd2-9dc6-5b5e449fee65.png)
+
+## Tietojen pysyväistallennus
+
+## Päätoiminnallisuudet 
+
+Seuraavaksi kuvataan ohjelman päätoiminnallisuudet sekvenssikaavion avulla. 
+
+### Käyttäjän kirjaantuminen
+
+Kirjautumisnäkymän syötekenttiin syötetään käyttäjätunnus ja salasana, ja sitten klikataan "login" painike. 
+Sen jälkeen ohjelma toimii seuraavasti:
+
+
+Kun käyttäjä on painanut "login" painike, ohjelma kutsuu sovelluslogiikan Services metodia login ja antaa parametriksi käyttäjätunnus ja salasana. Sen jälkeen sovelluslogiikka kutsuu UserRepository, ja sen avulla selvittää onko käyttäjätunnus ja salasana oikea. 
+Jos salasana ja käyttäjätunnus on oikea, sitten UserRepository määrittää käyttäjätunnuksen perusteella, että onko käyttäjä "opettaja" vai "oppilas".
+Ja sitten sen perusteella käyttöliittymä antaa joko TeacherView eli "opettajan" näkymä tai StudentView eli "oppilaiden" näkymä. 
