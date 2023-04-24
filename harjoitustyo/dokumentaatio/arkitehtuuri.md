@@ -58,6 +58,7 @@ Ja sitten sen perusteella käyttöliittymä antaa joko TeacherView eli "opettaja
 ### Uuden käyttäjän luominen
 
 Kun käyttäjä painaa "Register"-painike uuden käyttäjän luomisnäkymässä, ohjelma toimii seuraavasti:
+![IMG_20230424_042343_edit_636399330713845](https://user-images.githubusercontent.com/123125841/234088976-5a853ee9-7524-4715-bd24-0e69a2313f57.jpg)
 
 Tapahtumakäsittelijä kutsuu UserRepository, ja selvittää sen find_all metodin avulla, onko käyttäjänimi jo olemassa. Jos ei ole, niin tapahtumakäsittelijä kutsuu
 sovelluslogiikan metodia new_user, joka kutsuu UserRepository:n metodi create, ja sen avulla tallentaa uuden käyttäjän käyttäjätunnus, salasana ja rolenumber. Jos uuden käyttäjän luonti onnistuu, ohjelma palaa automaattisesti kirjautumisnäkymään, jos luominen ei onnistu, ohjelma ilmoittaa error viesti. 
@@ -66,6 +67,7 @@ sovelluslogiikan metodia new_user, joka kutsuu UserRepository:n metodi create, j
 
 "Oppilaiden" kurssisuorituksen lisääminen onnistuu ainoastaan "opettajilla". Suorituksen lisämisnäkymä pääsee klikkaamalla "add new course". 
 Kun "opettajat" ovat täydentänyt "oppilaan" rolenumber ja suoritustiedot, klikkaamalla "add course performance" sovelluksen kontrolli toimii seuraavasti:
+![Kuvakaappaus - 2023-04-24 21-52-24](https://user-images.githubusercontent.com/123125841/234089236-ea016dda-8e3b-41c8-aa68-3fc9d3807182.png)
 
 
 Tapahtumakäsittelijä kutsuu sovelluslogiikan metodi find_by_coursename_rolenumber, joka kutsuu CourseRepository:n metodi find_all_course_by_student_rolenumber ja palauttaa lista kyseisen oppilaan suoritustiedoista. Jos tämä uusi suoritustieto ei ole listassa, niin tapahtumakäsittelijä kutsuu sovelluslogiikasta add_new_course joka taas kutsuu CourseRepository:sta metodi create_course, joka lisää kyseisen oppilaan suoritustieto tietokantaan.  
