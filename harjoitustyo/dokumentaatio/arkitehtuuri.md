@@ -47,7 +47,8 @@ Seuraavaksi kuvataan ohjelman päätoiminnallisuudet sekvenssikaavion avulla.
 
 Kirjautumisnäkymän syötekenttiin syötetään käyttäjätunnus ja salasana, ja sitten klikataan "login" painike. 
 Sen jälkeen ohjelma toimii seuraavasti:
-
+recent:///2bbd96b5b6ef4612b03997986445e38e
+recent:///56acd43599df4cc3548fbfc06445e385
 
 Kun käyttäjä on painanut "login" painike, ohjelma kutsuu sovelluslogiikan Services metodia login ja antaa parametriksi käyttäjätunnus ja salasana. Sen jälkeen sovelluslogiikka kutsuu UserRepository, ja sen avulla selvittää onko käyttäjätunnus ja salasana oikea. 
 Jos salasana ja käyttäjätunnus on oikea, sitten UserRepository määrittää käyttäjätunnuksen perusteella, että onko käyttäjä "opettaja" vai "oppilas".
