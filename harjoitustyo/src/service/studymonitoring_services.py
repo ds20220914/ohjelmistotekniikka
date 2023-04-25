@@ -50,3 +50,19 @@ class Services:
 
     def add_new_course(self, rolenumber, course):
         course_repository.create_course(rolenumber, course)
+    def average_grade(self,username):
+        lista=user_repository.find_by_username(username)
+        rolenumber=lista[0]["role_number"]
+        courses=course_repository.find_all_course_by_student_role_number(rolenumber)
+        summa=0
+        for i in courses:
+            summa+=i["grade"]
+        return summa/len(courses)
+    def credit_sum(self,username):
+        lista=user_repository.find_by_username(username)
+        rolenumber=lista[0]["role_number"]
+        courses=course_repository.find_all_course_by_student_role_number(rolenumber)
+        summa=0
+        for i in courses:
+            summa+=i["credit"]
+        return summa

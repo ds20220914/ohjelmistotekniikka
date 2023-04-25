@@ -22,8 +22,7 @@ class UserRepository:
     def find_by_username(self,username):
         db_connection = self._connection1.cursor()
         lista = db_connection.execute("SELECT * FROM User WHERE User_name=?",(username,)).fetchall()
-        if len(lista)!=0:
-            return lista
+        return lista
     def delete_all(self):
         cursor = self._connection1.cursor()
         cursor.execute("delete from User")

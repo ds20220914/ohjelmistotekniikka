@@ -19,25 +19,31 @@ class StudentView:
     def _initialize(self):
         x = Services()
         lista = x.find_course_by_username(self.username)
+        grade=x.average_grade(self.username)
+        credit_sum=x.credit_sum(self.username)
         self._frame = ttk.Frame(master=self._root)
-        Keskiarvo_label = ttk.Label(master=self._frame, text="Keskiarvo:")
-        Opintopiste_label = ttk.Label(
-            master=self._frame, text="Opintopisteet:")
-        Kurssinimi_label = ttk.Label(master=self._frame, text="Kurssinimi")
-        Arvosana_label = ttk.Label(master=self._frame, text="Arvosana")
-        Opintopiste1_label = ttk.Label(master=self._frame, text="Opintopiste")
+        average_grade_label = ttk.Label(master=self._frame, text="Average grade:")
+        grade_label = ttk.Label(master=self._frame, text=grade)
+        credit_sum_label=ttk.Label(master=self._frame, text=credit_sum)
+        credit_label = ttk.Label(
+            master=self._frame, text="Credits together:")
+        course_name_label = ttk.Label(master=self._frame, text="course name")
+        grade1_label = ttk.Label(master=self._frame, text="grade")
+        credit1_label = ttk.Label(master=self._frame, text="credit")
 
         Logout = ttk.Button(master=self._frame,
                             text="Logout", command=self._logout)
-        Keskiarvo_label.grid(
+        average_grade_label.grid(
             row=1, column=0)
-        Opintopiste_label.grid(
-            row=1, column=0)
-        Kurssinimi_label.grid(
+        grade_label.grid(row=1,column=1)
+        credit_label.grid(
             row=2, column=0)
-        Arvosana_label.grid(row=2, column=1)
-        Opintopiste1_label.grid(
-            row=2, column=2)
+        credit_sum_label.grid(row=2, column=1)
+        course_name_label.grid(
+            row=3, column=0)
+        grade1_label.grid(row=3, column=1)
+        credit1_label.grid(
+            row=3, column=2)
 
         for i in range(len(lista)):
 
@@ -47,13 +53,13 @@ class StudentView:
                 master=self._frame, text=lista[i]["grade"])
             course_label3 = ttk.Label(
                 master=self._frame, text=lista[i]["Credit"])
-            course_label1.grid(row=i+3, column=0)
+            course_label1.grid(row=i+4, column=0)
 
-            course_label2.grid(row=i+3, column=1)
+            course_label2.grid(row=i+4, column=1)
 
-            course_label3.grid(row=i+3, column=2)
+            course_label3.grid(row=i+4, column=2)
 
-        Logout.grid(row=len(lista)+2+1, column=0, columnspan=2,
+        Logout.grid(row=len(lista)+4, column=0, columnspan=2,
                     sticky=(constants.E, constants.W))
 
         self._frame.grid_columnconfigure(1, weight=1)

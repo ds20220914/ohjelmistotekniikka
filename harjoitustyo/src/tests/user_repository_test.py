@@ -10,18 +10,24 @@ class TestUser(unittest.TestCase):
 
     def setUp(self):
         user_repository.delete_all()
-        self.user_eka = User("moi", "1234", "A2222")
+        self.user_first = User("moi", "1234", "A2222")
 
     def test_create_user(self):
         user = User("moi", "1234", "A2222")
-        user_repository.create(self.user_eka)
-        lista = user_repository.find_all()
-        käyttäjä = lista[0]
-        oikea = käyttäjä["User_name"]
-        print(oikea)
-        self.assertEqual(oikea, "moi")
+        user_repository.create(self.user_first)
+        list = user_repository.find_all()
+        user = list[0]
+        right = user["User_name"]
+        print(right)
+        self.assertEqual(right, "moi")
 
     def test_get_database_connection(self):
 
         connection = get_database_connection()
         self.assertIsNotNone(connection)
+    def test_find_by_username(self):
+        user = User("moi", "1234", "A2222")
+        user_repository.create(self.user_first)
+        list=user_repository.find_by_username(user.username)
+        sum=len(list)
+        self.assertEqual(sum, 1)
