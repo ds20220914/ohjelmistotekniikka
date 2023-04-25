@@ -1,5 +1,10 @@
+# Studentmonitoring-App (opintoseuranta järjestelmä)
 
-## Harjoitustyo
+Sovelluksen avulla käyttäjien on mahdollista ylläpitää kurssien suoritustiedot. 
+Sovellusta voi käyttää monta käyttäjää, ja kaikilla on oma rooli käyttäjätunnuksen perusteella.
+Rooleja on "oppilas" ja "opettaja".
+
+
 
 ### Dokumentaatio
 

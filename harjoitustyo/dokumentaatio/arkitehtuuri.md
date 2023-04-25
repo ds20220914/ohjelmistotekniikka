@@ -39,6 +39,8 @@ Services pysty hyödyntää käyttäjien ja kurssisuorituksien tietoja niiden ta
 
 ## Tietojen pysyväistallennus
 
+Pakkauksen "repository" luokat UserRepository ha CourseRepository hoitavat tietojen talletamista ja etsimistä. UserRepository-luokka käsittelee käyttäjätunnusta, salasanaa ja rolenumberia talletava tietokanta, ja CourseRepository-luokka käsittelee kurssisuoritusta talletava tietokanta.  
+
 ## Päätoiminnallisuudet 
 
 Seuraavaksi kuvataan ohjelman päätoiminnallisuudet sekvenssikaavion avulla. 
