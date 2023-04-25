@@ -11,6 +11,8 @@
 
 [arkitehtuuri](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/arkitehtuuri.md)
 
+[Releasit](https://github.com/ds20220914/ohjelmistotekniikka/releases/tag/viikko5)
+
 # Asennus
 
 ### 1. Asenna riippuvuuden komennolla:
