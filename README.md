@@ -24,7 +24,11 @@ Rooleja on "oppilas" ja "opettaja".
 
 *poetry install*
 
-### 2. Käynnistä sovellus:
+### 2. Tietokannan alustustoimenpiteet:
+
+*poetry run invoke build*
+
+### 3. Käynnistä sovellus:
 
 *poetry run invoke start* 
 
