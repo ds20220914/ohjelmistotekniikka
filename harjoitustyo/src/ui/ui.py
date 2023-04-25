@@ -69,14 +69,14 @@ class UI:
         number = self._current_view.rolenumber_entry.get()
         array = Services()
         array1 = array.find_by_rolenumber(number)
-        oikea = None
+        right = None
         if len(array1) == 0:
-            oikea = False
+            right = False
         if len(array1) != 0:
-            oikea = True
+            right = True
         self._current_view.destroy()
         self._current_view = TeacherView1(
-            self._root, oikea, number, self.logout)
+            self._root, right, number, self.logout)
         self._current_view.pack()
 
     def add_new_course(self):

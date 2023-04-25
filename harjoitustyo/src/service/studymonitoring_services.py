@@ -57,7 +57,10 @@ class Services:
         summa=0
         for i in courses:
             summa+=i["grade"]
-        return summa/len(courses)
+        if len(courses)!=0:
+            return summa/len(courses)
+        else:
+            return summa
     def credit_sum(self,username):
         lista=user_repository.find_by_username(username)
         rolenumber=lista[0]["role_number"]
