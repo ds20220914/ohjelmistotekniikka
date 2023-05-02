@@ -52,6 +52,11 @@ class CourseRepository:
         lista = db_connection.execute(
             "SELECT * FROM Course WHERE Role_number=?", (rolenumber,)).fetchall()
         return list(lista)
+    def delete_all(self):
+        ''' poistaa kaikki suoritukset'''
+        cursor = self._connection2.cursor()
+        cursor.execute("delete from Course")
+        self._connection2.commit()
 
 
 course_repository = CourseRepository(
