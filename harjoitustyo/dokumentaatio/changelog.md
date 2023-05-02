@@ -32,4 +32,5 @@
 - enemmän testejä
 - pylint virheitä korjattu
 - docstring lisätty
-
+- käyttöohjeet lisätty
+- ohjelma logiikka lisätty
