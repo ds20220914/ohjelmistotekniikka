@@ -19,6 +19,7 @@ Nyt ohjelman voi käynnistää komennolla:
 ## Kirjautuminen
 
 Sovellus käynnistyy kirjautumisnäkymään:
+![Kuvakaappaus - 2023-05-02 20-35-08](https://user-images.githubusercontent.com/123125841/235743403-04893fce-fc96-48d2-a80f-22338ceb2814.png)
 
 Jos käyttäjätunnus ja salasana ovat olemassa, paina "Login" ja kirjautuminen onnistuu.
 
