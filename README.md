@@ -16,7 +16,7 @@ Rooleja on "oppilas" ja "opettaja".
 
 [arkitehtuuri](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/arkitehtuuri.md)
 
-[Releasit](https://github.com/ds20220914/ohjelmistotekniikka/releases/tag/viikko5)
+[Releasit](https://github.com/ds20220914/ohjelmistotekniikka/releases)
 
 [Käyttöohje](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kayttoohje.md)
 
