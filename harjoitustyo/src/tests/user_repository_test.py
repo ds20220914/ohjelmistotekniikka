@@ -5,8 +5,8 @@ from database_connection import get_course_connection
 from database_connection import get_database_connection
 import sqlite3
 
+
 class TestUser(unittest.TestCase):
-    
 
     def setUp(self):
         user_repository.delete_all()
@@ -25,9 +25,10 @@ class TestUser(unittest.TestCase):
 
         connection = get_database_connection()
         self.assertIsNotNone(connection)
+
     def test_find_by_username(self):
         user = User("moi", "1234", "A2222")
         user_repository.create(self.user_first)
-        list=user_repository.find_by_username(user.username)
-        sum=len(list)
+        list = user_repository.find_by_username(user.username)
+        sum = len(list)
         self.assertEqual(sum, 1)

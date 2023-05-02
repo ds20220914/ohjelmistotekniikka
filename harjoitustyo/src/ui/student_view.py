@@ -19,12 +19,13 @@ class StudentView:
     def _initialize(self):
         x = Services()
         lista = x.find_course_by_username(self.username)
-        grade=x.average_grade(self.username)
-        credit_sum=x.credit_sum(self.username)
+        grade = x.average_grade(self.username)
+        credit_sum = x.credit_sum(self.username)
         self._frame = ttk.Frame(master=self._root)
-        average_grade_label = ttk.Label(master=self._frame, text="Average grade:")
+        average_grade_label = ttk.Label(
+            master=self._frame, text="Average grade:")
         grade_label = ttk.Label(master=self._frame, text=grade)
-        credit_sum_label=ttk.Label(master=self._frame, text=credit_sum)
+        credit_sum_label = ttk.Label(master=self._frame, text=credit_sum)
         credit_label = ttk.Label(
             master=self._frame, text="Credits together:")
         course_name_label = ttk.Label(master=self._frame, text="course name")
@@ -35,7 +36,7 @@ class StudentView:
                             text="Logout", command=self._logout)
         average_grade_label.grid(
             row=1, column=0)
-        grade_label.grid(row=1,column=1)
+        grade_label.grid(row=1, column=1)
         credit_label.grid(
             row=2, column=0)
         credit_sum_label.grid(row=2, column=1)

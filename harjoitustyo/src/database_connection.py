@@ -9,8 +9,6 @@ connection_course = sqlite3.connect(DATABASE_FILE_PATH1)
 connection_course.row_factory = sqlite3.Row
 
 
-
-
 def get_database_connection():
     return connection
 

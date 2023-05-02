@@ -28,7 +28,7 @@ class TeacherView1:
             course_label.grid(row=1, column=0, sticky=(
                 constants.E, constants.W))
             logout.grid(row=2, column=0, columnspan=2,
-                    sticky=(constants.E, constants.W))
+                        sticky=(constants.E, constants.W))
 
         if self.oikea == True:
             array = Services()
@@ -51,6 +51,6 @@ class TeacherView1:
                 course_label2.grid(row=i+2, column=1)
                 course_label3.grid(row=i+2, column=2)
                 logout.grid(row=len(array1)+2, column=0, columnspan=2,
-                    sticky=(constants.E, constants.W))
+                            sticky=(constants.E, constants.W))
 
         self._frame.grid_columnconfigure(1, weight=1)

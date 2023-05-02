@@ -28,11 +28,11 @@ class NewCourseView:
         grade = self.grade_entry.get()
         result = Services()
         result1 = result.find_by_coursename_rolenumber(rolenumber, course_name)
-        all=True
-        list=["0","1","2","3","4","5"]
-        if course_name==None or rolenumber==None or credit==None or grade==None or credit not in list or grade not in list:
-            all=False
-        if result1 == False or all==False:
+        all = True
+        list = ["0", "1", "2", "3", "4", "5"]
+        if course_name == None or rolenumber == None or credit == None or grade == None or credit not in list or grade not in list:
+            all = False
+        if result1 == False or all == False:
             error_label = ttk.Label(
                 master=self._frame, text=" course information already added or missing information or wrong information")
             error_label.grid(row=6, column=0, sticky=(
@@ -42,7 +42,7 @@ class NewCourseView:
             self.grade_entry.delete(0, "end")
             self.credit_entry.delete(0, "end")
 
-        elif result1 == True and all==True:
+        elif result1 == True and all == True:
             course = Course(course_name, credit, grade)
             result.add_new_course(rolenumber, course)
             error_label = ttk.Label(
