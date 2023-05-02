@@ -25,3 +25,11 @@
 - testikattavuus nousi
 - pylint virheitä on korjattu
 - osa "opettajien" toiminnan virheilmoitukset on lisätty 
+
+## Viikko 6
+- "Oppilaan" keskiarvo
+- "Oppilaan" opintopisteet
+- enemmän testejä
+- pylint virheitä korjattu
+- docstring lisätty
+

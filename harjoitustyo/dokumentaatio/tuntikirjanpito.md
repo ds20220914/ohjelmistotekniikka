@@ -10,6 +10,8 @@
 |14.4 | 2 tuntia | nostaa testikattavuus |
 |21.4 | 6 tuntia | testit ja testien tietokannan luominen, pylint virheiden korjaaminen, sekä ohjelman error ilmoituksen lisääminen |
 |22.4 | 5 tuntia | "oppilaan" sisäänkirjautuminen luotu ja näyttää "oppilaan"kurssitiedot|
+|29.4 | 3 tuntia | "oppilaan" keskiarvo ja opintopisteet|
+|30.4 | 4 tuntia | docstring ja käyttöohje|
+|1.5 | 2 tuntia | enemmän testi ja pylint virheitä korjattu|
 
-
-yhteismäärä  41 tuntia
+yhteismäärä  50 tuntia

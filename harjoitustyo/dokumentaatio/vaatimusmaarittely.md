@@ -34,9 +34,9 @@ käyttäjät voivat myös siirtyä setting-näkymään kun on kirjautunut sisä�
 
 ### Kirjautumisen jälkeen
 
-- Opiskelijat eli normaalit käyttäjät näkevät omat suoritustiedot
+- Opiskelijat eli normaalit käyttäjät näkevät omat suoritustiedot "tehty"
   - Painamalla "setting" normaalit käyttäjät pääsevät näkemään oman käyttäjätiedon. 
-- Opettajat eli pääkäyttäjät voivat etsiä opiskelijanumeron avulla tietyn opiskelijan suoritustiedot ja muokkaa
+- Opettajat eli pääkäyttäjät voivat etsiä opiskelijanumeron avulla tietyn opiskelijan suoritustiedot ja muokkaa 
   niitä(uuden kurssin lisääminen, kurssin arvosanan antaaminen). "tehty"
   - Painamalla "setting" pääkäyttäjät pääsevät näkemään oman käyttäjätiedon. 
-- käyttäjät voivat kirjautua ulos painamalla ensin "setting" ja sitten "logout". 
+- käyttäjät voivat kirjautua ulos painamalla  "logout"."tehty" 
