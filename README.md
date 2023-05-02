@@ -20,15 +20,15 @@ Rooleja on "oppilas" ja "opettaja".
 
 # Asennus
 
-### 1. Asenna riippuvuuden komennolla:
+### 1. Asenna riippuvuuden komennolla harjoitustyo-alihakemistossa:
 
 *poetry install*
 
-### 2. Tietokannan alustustoimenpiteet:
+### 2. Tietokannan alustustoimenpiteet harjoitustyo-alihakemistossa:
 
 *poetry run invoke build*
 
-### 3. Käynnistä sovellus:
+### 3. Käynnistä sovellus harjoitustyo-alihakemistossa:
 
 *poetry run invoke start* 
 
