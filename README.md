@@ -18,6 +18,8 @@ Rooleja on "oppilas" ja "opettaja".
 
 [Releasit](https://github.com/ds20220914/ohjelmistotekniikka/releases/tag/viikko5)
 
+[Käyttöohje](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kayttoohje.md)
+
 # Asennus
 
 ### 1. Asenna riippuvuuden komennolla harjoitustyo-alihakemistossa:

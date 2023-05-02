@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa projektin viimeisimmän [releasen]() lähdekoodi valitsemalla Assets-osion alta Source code.
+Lataa projektin viimeisimmän [releasen](https://github.com/ds20220914/ohjelmistotekniikka/releases/tag/viikko5) lähdekoodi valitsemalla Assets-osion alta Source code.
 
 ## Ohjelman käynnistäminen
 
