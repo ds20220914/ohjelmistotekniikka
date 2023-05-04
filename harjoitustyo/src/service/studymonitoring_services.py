@@ -114,13 +114,17 @@ class Services:
         array=self.find_course_by_username(username)
         array2=[]
         array3=[]
-        for i in range(1,len(array)):
+        summa=0
+        for i in range(1,len(array)+1):
             array3.append(i)
-        for i in range(1,len(array)):
-            array2.append((array[i]["grade"])/i)
-        plt.plot(array3,array2)
+        for i in range(1,len(array)+1):
+            luku=array[i-1]["grade"]
+            summa+=luku
+            array2.append(summa/i)
+        plt.plot(array3,array2,"ro")
         plt.ylabel('average grade')
-        plt.xlabel("number of grade")
+        plt.xlabel("number of course")
+        plt.axis([0,len(array2)+1,0,max(array2)+1])
         plt.show()
     def credit_sum(self, username):
         ''' laskee opintopisteiden summa
