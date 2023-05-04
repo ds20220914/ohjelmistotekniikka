@@ -1,6 +1,7 @@
 from repository.user_repository import user_repository
 from repository.course_repository import course_repository
 from entities.user import User
+import matplotlib.pyplot as plt
 
 
 class Services:
@@ -109,7 +110,18 @@ class Services:
             return summa/len(courses)
         else:
             return summa
-
+    def show_diagram(self,username):
+        array=self.find_course_by_username(username)
+        array2=[]
+        array3=[]
+        for i in range(1,len(array)):
+            array3.append(i)
+        for i in range(1,len(array)):
+            array2.append((array[i]["grade"])/i)
+        plt.plot(array3,array2)
+        plt.ylabel('average grade')
+        plt.xlabel("number of grade")
+        plt.show()
     def credit_sum(self, username):
         ''' laskee opintopisteiden summa
             Args:
@@ -125,3 +137,8 @@ class Services:
         for i in courses:
             summa += i["credit"]
         return summa
+    def delete_course(self,name,rolenumber):
+       delete=course_repository.delete_course(name,rolenumber)
+       return delete
+       
+  

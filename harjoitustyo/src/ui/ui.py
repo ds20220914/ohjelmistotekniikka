@@ -15,6 +15,7 @@ class UI:
         self._root = root
         self._current_view = None
         self._ero = None
+        self.number=None
 
     def start(self):
         oikea = True
@@ -37,7 +38,7 @@ class UI:
         if luku2 == 2:
             oikea = True
             self._current_view = StudentView(
-                self._root, self.logout, username)
+                self._root, self.logout, username,self.diagram)
 
             self._current_view.pack()
         else:
@@ -66,9 +67,9 @@ class UI:
         self._current_view.pack()
 
     def check_student(self):
-        number = self._current_view.rolenumber_entry.get()
+        self.number = self._current_view.rolenumber_entry.get()
         array = Services()
-        array1 = array.find_by_rolenumber(number)
+        array1 = array.find_by_rolenumber(self.number)
         right = None
         if len(array1) == 0:
             right = False
@@ -76,10 +77,29 @@ class UI:
             right = True
         self._current_view.destroy()
         self._current_view = TeacherView1(
-            self._root, right, number, self.logout)
+            self._root, right, self.number, self.logout,self.delete_course)
         self._current_view.pack()
-
+    def delete_course(self):
+        nimi=self._current_view.delete_entry.get()
+        delete=Services()
+        success=delete.delete_course(nimi,self.number)
+        array = Services()
+        array1 = array.find_by_rolenumber(self.number)
+        right = None
+        if len(array1) == 0:
+            right = False
+        if len(array1) != 0:
+            right = True
+        self._current_view.destroy()
+        self._current_view = TeacherView1(
+            self._root, right, self.number, self.logout,self.delete_course)
+        self._current_view.pack()
     def add_new_course(self):
         self._current_view.destroy()
         self._current_view = NewCourseView(self._root, self.logout)
         self._current_view.pack()
+    def diagram(self):
+        name=self._current_view.username
+        diagram=Services()
+        diagram.show_diagram(name)
+ 

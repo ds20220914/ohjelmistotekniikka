@@ -3,11 +3,12 @@ from service.studymonitoring_services import Services
 
 
 class StudentView:
-    def __init__(self, root, logout, username):
+    def __init__(self, root, logout, username,diagram):
         self._root = root
         self._logout = logout
         self._frame = None
         self.username = username
+        self.diagram=diagram
         self._initialize()
 
     def pack(self):
@@ -34,6 +35,8 @@ class StudentView:
 
         Logout = ttk.Button(master=self._frame,
                             text="Logout", command=self._logout)
+        diagram = ttk.Button(master=self._frame,
+                            text="show average grade diagram", command=self.diagram)
         average_grade_label.grid(
             row=1, column=0)
         grade_label.grid(row=1, column=1)
@@ -61,6 +64,8 @@ class StudentView:
             course_label3.grid(row=i+4, column=2)
 
         Logout.grid(row=len(lista)+4, column=0, columnspan=2,
+                    sticky=(constants.E, constants.W))
+        diagram.grid(row=len(lista)+5, column=0, columnspan=2,
                     sticky=(constants.E, constants.W))
 
         self._frame.grid_columnconfigure(1, weight=1)

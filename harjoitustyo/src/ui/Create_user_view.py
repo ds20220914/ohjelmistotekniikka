@@ -30,6 +30,10 @@ class Create_user:
             if username in i:
                 self._error("creation error,try other username")
                 return
+        for i in lista:
+            if studentnumber in i:
+                self._error("creation error,try other username or rolenumber already have")
+                return
         käyttäjä = User(username, password, studentnumber)
         uusi = Services()
         uusi.new_user(username, password, studentnumber)
