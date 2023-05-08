@@ -22,38 +22,58 @@ class NewCourseView:
         self._frame.destroy()
 
     def check_course(self):
-        course_name = self.course_name_entry.get()
-        rolenumber = self.rolenumber_entry.get()
-        credit = self.credit_entry.get()
-        grade = self.grade_entry.get()
-        result = Services()
-        result1 = result.find_by_coursename_rolenumber(rolenumber, course_name)
-        all = True
-        list = ["0", "1", "2", "3", "4", "5"]
-        if course_name == None or rolenumber == None or credit == None or grade == None or credit not in list or grade not in list:
-            all = False
-        if result1 == False or all == False:
+        try:
+            course_name = self.course_name_entry.get()
+            rolenumber = self.rolenumber_entry.get()
+            credit = self.credit_entry.get()
+            grade = self.grade_entry.get()
+            course = Course(course_name, credit, grade)
+            result=Services()
+            result1=result.add_new_course(rolenumber, course)
+            print(result1)
+            print(course_name,rolenumber,grade,credit)
+            if result1 == False:
+                error_label = ttk.Label(
+                    master=self._frame, text=" course information already added or missing information or wrong information")
+                error_label.grid(row=6, column=0, sticky=(
+                    constants.E, constants.W))
+                self.rolenumber_entry.delete(0, "end")
+                self.course_name_entry.delete(0, "end")
+                self.grade_entry.delete(0, "end")
+                self.credit_entry.delete(0, "end")
+            
+
+            if result1 == True:
+                error_label = ttk.Label(
+                    master=self._frame, text=" course information added")
+                error_label.grid(row=6, column=0, sticky=(
+                    constants.E, constants.W))
+                self.rolenumber_entry.delete(0, "end")
+                self.course_name_entry.delete(0, "end")
+                self.grade_entry.delete(0, "end")
+                self.credit_entry.delete(0, "end")
+            
+        except AttributeError:
             error_label = ttk.Label(
                 master=self._frame, text=" course information already added or missing information or wrong information")
             error_label.grid(row=6, column=0, sticky=(
                 constants.E, constants.W))
-            self.rolenumber_entry.delete(0, "end")
-            self.course_name_entry.delete(0, "end")
-            self.grade_entry.delete(0, "end")
-            self.credit_entry.delete(0, "end")
-
-        elif result1 == True and all == True:
-            course = Course(course_name, credit, grade)
-            result.add_new_course(rolenumber, course)
-            error_label = ttk.Label(
-                master=self._frame, text=" course information added")
-            error_label.grid(row=6, column=0, sticky=(
-                constants.E, constants.W))
-            self.rolenumber_entry.delete(0, "end")
-            self.course_name_entry.delete(0, "end")
-            self.grade_entry.delete(0, "end")
-            self.credit_entry.delete(0, "end")
-
+            if self.rolenumber_entry != None:
+                self.rolenumber_entry.delete(0, "end")
+                
+            if self.grade_entry != None:
+                self.grade_entry.delete(0, "end")
+                
+            if self.credit_entry != None:
+                self.credit_entry.delete(0, "end")
+                
+            if self.course_name_entry != None:
+                self.course_name_entry.delete(0, "end")
+                
+            
+            
+            
+        
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 

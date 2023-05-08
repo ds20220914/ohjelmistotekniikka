@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 class Services:
     ''' sovelluslogiikasta vastaava luokka'''
 
-    def new_user(self, name, password, role_number):
-        ''' luo uuden käyttäjän tietokantaan 
+    def new_user(self, name, password,role_number):
+        ''' lisää uuden käyttäjän tietokantaan 
             Args:
                name:uuden käyttäjän nimi
                password:uuden käyttäjän salasana
@@ -16,8 +16,17 @@ class Services:
             Returns:
                user-olio
         '''
+        if len(name) == 0 or len(password) == 0 or len(role_number) == 0:
+            return False
+        lista = user_repository.find_all()
+        for i in lista:
+            if name in i:
+                return False
+        if name[0]!="A" and name[0]!="B":
+            return False
+        
         user = user_repository.create(User(name, password, role_number))
-        return user
+        return True
 
     def find_course_by_username(self, username):
         ''' etsi kurssien suoritustiedot käyttäjänimen avulla
@@ -55,6 +64,15 @@ class Services:
             Returns:
                 palauttaa True jos kurssitieto jo olemassa, False jos ei ole olemassa
         '''
+        all_user=user_repository.find_all()
+        exist=False
+        for i in all_user:
+            if rolenumber in i:
+                exist=True
+        if exist==False:
+            return False
+        if len(rolenumber)==0 or len(course_name)==0:
+            return False
         lista = course_repository.find_all_course_by_student_role_number(
             rolenumber)
         for i in lista:
@@ -72,17 +90,24 @@ class Services:
                      ja käyttäjänimi ja salasana oikein, palauttaa 1
                 jos käyttäjänimi alkaa B, eli on opiskelija,
                      ja käyttäjänimi ja salasana oikein, palauttaa 2
+                jos käyttäjänimi ei alka A tai B tai jos salasana tai käyttäjänimi
+                     on väärin, palauttaa 3
         '''
-        if username[0] == "A":
-            lista = user_repository.find_all()
-            for i in lista:
-                if username == i["User_name"] and password == i["password"]:
-                    return 1
-        elif username[0] == "B":
-            lista = user_repository.find_all()
-            for i in lista:
-                if username == i["User_name"] and password == i["password"]:
-                    return 2
+        if len(username)==0 or len(password)==0:
+            return 3
+        if len(username)!=0 and len(password)!=0:
+            if username[0] == "A":
+                lista = user_repository.find_all()
+                for i in lista:
+                    if username == i["User_name"] and password == i["password"]:
+                        return 1
+            if username[0] == "B":
+                lista = user_repository.find_all()
+                for i in lista:
+                    if username == i["User_name"] and password == i["password"]:
+                        return 2
+            else:
+                return 3
 
     def add_new_course(self, rolenumber, course):
         ''' lisää uuden suoritustieto opiskelijalle
@@ -90,8 +115,18 @@ class Services:
                 rolenumber: käyttäjän roolinumero
                 course: kurssi-oliona
         '''
-        course_repository.create_course(rolenumber, course)
-
+        result1 = self.find_by_coursename_rolenumber(rolenumber, course.course_name)
+        
+        list = ["0", "1", "2", "3", "4", "5"]
+        if len(course.course_name)==0 or len(rolenumber)==0 or len(course.credits) == 0 or len(course.grade) == 0 or course.credits not in list or course.grade not in list or course.course_name==None or rolenumber==None or course.credits==None or course.grade==None:
+            return False
+        if result1 == False:
+            return False
+        if result1 == True:
+            course_repository.create_course(rolenumber, course)
+            return True
+         
+        
     def average_grade(self, username):
         ''' laskee opiskelijan keskiarvo
             Args:

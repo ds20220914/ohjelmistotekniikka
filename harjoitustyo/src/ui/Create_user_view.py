@@ -21,23 +21,14 @@ class Create_user:
         username = self.username_entry.get()
         password = self.password_entry.get()
         studentnumber = self.number_entry.get()
-        if len(username) == 0 or len(password) == 0 or studentnumber == 0:
-            self._error("creation error ")
+        user = User(username, password, studentnumber)
+        new = Services()
+        result=new.new_user(user.username, user.password, user.role_number)
+        if result==False:
+            self._error("creation error,try other username or rolenumber already have")
             return
-
-        lista = user_repository.find_all()
-        for i in lista:
-            if username in i:
-                self._error("creation error,try other username")
-                return
-        for i in lista:
-            if studentnumber in i:
-                self._error("creation error,try other username or rolenumber already have")
-                return
-        käyttäjä = User(username, password, studentnumber)
-        uusi = Services()
-        uusi.new_user(username, password, studentnumber)
-        self._start_login_view()
+        if result==True:
+            self._start_login_view()
 
     def _error(self, message):
         self._error_label = ttk.Label(master=self._frame, text=message)
