@@ -6,6 +6,6 @@ def build():
     ''' 
     initialize_database()
 
-
+'''tämä avulla voi komentorivilla kutsua build()'''
 if __name__ == "__main__":
     build()

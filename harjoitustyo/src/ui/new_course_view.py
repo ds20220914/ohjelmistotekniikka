@@ -5,7 +5,15 @@ from entities.course import Course
 
 
 class NewCourseView:
+    ''' Opiskelijan suorituksen lisäämisesta vastaava näkymä'''
     def __init__(self, root, logout):
+        ''' Luokan konstruktori. Luo uuden kurssisuorituksen lisäämisnäkymän
+            Args:
+                 root:
+                     TKinter-elementti, jonka sisään näkymä alustetaan.
+                 logout:
+                     Kutsuttava arvo, joka kutsutaan kun käyttäjä haluaa kirjautua ulos
+        '''
         self._root = root
         self.logout = logout
         self._frame = None
@@ -16,12 +24,18 @@ class NewCourseView:
         self._initialize()
 
     def pack(self):
+        ''' näyttää näkymän'''
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        ''' Tuhoaa näkymän'''
         self._frame.destroy()
 
     def check_course(self):
+        ''' tarkistaa, onko kyseisen opiskelijan kyseinen suoritus jo olemassa
+            tai onko kaikki tarvittavat tiedot annettu oikealla tavalla
+            Jos ei niin esittää virheilmoitus, muuten lisää kyseinen suoritus tietokantaan.
+        '''
         try:
             course_name = self.course_name_entry.get()
             rolenumber = self.rolenumber_entry.get()
@@ -75,6 +89,8 @@ class NewCourseView:
             
         
     def _initialize(self):
+        ''' määrittää sisäänkirjautumisnäkymän toiminta ja ulkoasu
+        ''' 
         self._frame = ttk.Frame(master=self._root)
 
         rolenumber_label = ttk.Label(

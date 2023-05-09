@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-
+''' antaa tietokannoille nimi ja luoda polku'''
 dirname = os.path.dirname(__file__)
 
 try:

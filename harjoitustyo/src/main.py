@@ -3,6 +3,9 @@ from ui.ui import UI
 
 
 def main():
+    ''' antaa ohjelmalle nimi. 
+        käynnistää käyttöliittymä kun ohjelma käynnistetään
+    '''
     show = Tk()
     show.title("OpS application")
 

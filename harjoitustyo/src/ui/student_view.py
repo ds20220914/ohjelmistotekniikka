@@ -3,7 +3,20 @@ from service.studymonitoring_services import Services
 
 
 class StudentView:
+    ''' Opiskelijan oma suorituksen tarkistamisesta vastaava näkymä'''
     def __init__(self, root, logout, username,diagram):
+        ''' Luokan konstruktori. Luo uuden opiskelijan oman suorituksen tarkistusnäkymän
+            Args:
+                 root:
+                     TKinter-elementti, jonka sisään näkymä alustetaan.
+                 logout:
+                     Kutsuttava arvo, joka kutsutaan kun käyttäjä haluaa kirjautua ulos
+                 username:
+                     arvo, joka kertoo opiskelijan käyttäjätunnus
+                 diagram:
+                     Kutsuttava arvo, joka kutsutaan kun käyttäjä haluaa tarkistaa
+                     keskiarvon diagrami.
+        '''
         self._root = root
         self._logout = logout
         self._frame = None
@@ -12,12 +25,16 @@ class StudentView:
         self._initialize()
 
     def pack(self):
+        ''' näyttää näkymän'''
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        ''' Tuhoaa näkymän'''
         self._frame.destroy()
 
     def _initialize(self):
+        ''' määrittää sisäänkirjautumisnäkymän toiminta ja ulkoasu
+        '''
         x = Services()
         lista = x.find_course_by_username(self.username)
         grade = x.average_grade(self.username)

@@ -3,7 +3,23 @@ from service.studymonitoring_services import Services
 
 
 class TeacherView1:
+    ''' Opettajan tietyn opiskelijan suorituksen tarkistamisesta
+        vastaava näkymä
+    '''
     def __init__(self, root, oikea, number, logout,delete):
+        ''' Luokan konstruktori. Luo uuden kurssisuorituksen tarkistusnäkymä
+            Args:
+                 root:
+                     TKinter-elementti, jonka sisään näkymä alustetaan.
+                 logout:
+                     Kutsuttava arvo, joka kutsutaan kun käyttäjä haluaa kirjautua ulos
+                 oikea:
+                     arvo, joka kertoo onko tarkistuksen kohteena olevalla opiskelijalla
+                     yhtään kurssisuoritusta.
+                 delete:
+                     Kutsuttava arvo, joka kutsutaan kun haluaa poistaa tietty kurssisuoritus tietyltä 
+                     opiskelijalta. 
+        '''
         self._root = root
         self.oikea = oikea
         self.number = number
@@ -15,12 +31,16 @@ class TeacherView1:
         self._initialize()
 
     def pack(self):
+        ''' näyttää näkymän'''
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        ''' Tuhoaa näkymän'''
         self._frame.destroy()
 
     def _initialize(self):
+        ''' määrittää sisäänkirjautumisnäkymän toiminta ja ulkoasu
+        '''
         self._frame = ttk.Frame(master=self._root)
         logout = ttk.Button(master=self._frame, text="Logout",
                             command=self.logout)
