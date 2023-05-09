@@ -57,7 +57,7 @@ class Services:
         return lista
 
     def find_by_coursename_rolenumber(self, rolenumber, course_name):
-        ''' etsi onko tietty kurssin suoritustieto jo olemassa tietokannassa
+        ''' etsi onko tietty opiskelijan tietyn kurssin suoritustieto jo olemassa tietokannassa
             Args:
                 rolenumber: roolinumero
                 course_name: kurssin nimi
@@ -76,7 +76,7 @@ class Services:
         lista = course_repository.find_all_course_by_student_role_number(
             rolenumber)
         for i in lista:
-            if course_name == i["Course_name"]:
+            if course_name==i["Course_name"]:
                 return False
         return True
 
@@ -122,9 +122,8 @@ class Services:
             return False
         if result1 == False:
             return False
-        if result1 == True:
-            course_repository.create_course(rolenumber, course)
-            return True
+        course_repository.create_course(rolenumber, course)
+        return True
          
         
     def average_grade(self, username):

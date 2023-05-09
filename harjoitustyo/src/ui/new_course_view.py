@@ -48,7 +48,7 @@ class NewCourseView:
             print(course_name,rolenumber,grade,credit)
             if result1 == False:
                 error_label = ttk.Label(
-                    master=self._frame, text=" course information already added or missing information or wrong information")
+                    master=self._frame, text=" course information already added or missing information or wrong information,check if student exist")
                 error_label.grid(row=6, column=0, sticky=(
                     constants.E, constants.W))
                 self.rolenumber_entry.delete(0, "end")

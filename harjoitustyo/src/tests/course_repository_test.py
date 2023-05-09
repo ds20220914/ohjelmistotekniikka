@@ -19,3 +19,17 @@ class TestCourse(unittest.TestCase):
         print(name)
         self.assertEqual(name, "math")
 
+    def test_find_all_course(self):
+        course_repository.create_course(self.role_number,self.course_first)
+        list = course_repository.find_all_course()
+        courses = list[0]
+        name = courses["Course_name"]
+        print(name)
+        self.assertEqual(name, "math")
+    def test_find_all_course_by_student_role_number(self):
+        course_repository.create_course(self.role_number,self.course_first)
+        list = course_repository.find_all_course_by_student_role_number(self.role_number)
+        courses = list[0]
+        name = courses["Course_name"]
+        print(name)
+        self.assertEqual(name, "math")
