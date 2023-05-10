@@ -93,21 +93,20 @@ class Services:
                 jos käyttäjänimi ei alka A tai B tai jos salasana tai käyttäjänimi
                      on väärin, palauttaa 3
         '''
-        if len(username)==0 or len(password)==0:
-            return 3
+        
         if len(username)!=0 and len(password)!=0:
             if username[0] == "A":
                 lista = user_repository.find_all()
                 for i in lista:
                     if username == i["User_name"] and password == i["password"]:
                         return 1
+            
             if username[0] == "B":
                 lista = user_repository.find_all()
                 for i in lista:
                     if username == i["User_name"] and password == i["password"]:
                         return 2
-            else:
-                return 3
+        return 3
 
     def add_new_course(self, rolenumber, course):
         ''' lisää uuden suoritustieto opiskelijalle
