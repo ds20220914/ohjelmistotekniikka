@@ -1,7 +1,8 @@
+import matplotlib.pyplot as plt
 from repository.user_repository import user_repository
 from repository.course_repository import course_repository
 from entities.user import User
-import matplotlib.pyplot as plt
+
 
 
 class Services:
@@ -24,8 +25,7 @@ class Services:
                 return False
         if name[0]!="A" and name[0]!="B":
             return False
-        
-        user = user_repository.create(User(name, password, role_number))
+        user_repository.create(User(name, password, role_number))
         return True
 
     def find_course_by_username(self, username):
@@ -69,7 +69,7 @@ class Services:
         for i in all_user:
             if rolenumber in i:
                 exist=True
-        if exist==False:
+        if exist is False:
             return False
         if len(rolenumber)==0 or len(course_name)==0:
             return False
@@ -93,18 +93,13 @@ class Services:
                 jos käyttäjänimi ei alka A tai B tai jos salasana tai käyttäjänimi
                      on väärin, palauttaa 3
         '''
-        
-        if len(username)!=0 and len(password)!=0:
-            if username[0] == "A":
-                lista = user_repository.find_all()
-                for i in lista:
-                    if username == i["User_name"] and password == i["password"]:
+        if len(username) != 0 and len(password) != 0:
+            lista = user_repository.find_all()
+            for i in lista:
+                if username == i["User_name"] and password == i["password"]:
+                    if username[0] == "A":
                         return 1
-            
-            if username[0] == "B":
-                lista = user_repository.find_all()
-                for i in lista:
-                    if username == i["User_name"] and password == i["password"]:
+                    if username[0] == "B":
                         return 2
         return 3
 
@@ -115,16 +110,19 @@ class Services:
                 course: kurssi-oliona
         '''
         result1 = self.find_by_coursename_rolenumber(rolenumber, course.course_name)
-        
-        list = ["0", "1", "2", "3", "4", "5"]
-        if len(course.course_name)==0 or len(rolenumber)==0 or len(course.credits) == 0 or len(course.grade) == 0 or course.credits not in list or course.grade not in list or course.course_name==None or rolenumber==None or course.credits==None or course.grade==None:
+        list1 = ["0", "1", "2", "3", "4", "5"]
+        if (
+           len(course.course_name) == 0 or len(rolenumber) == 0 or
+           len(course.credits) == 0 or len(course.grade) == 0 or
+           course.credits not in list1 or course.grade not in list1 or
+           course.course_name is None or rolenumber is None or
+           course.credits is None or course.grade is None
+        ):
             return False
-        if result1 == False:
+        if result1 is False:
             return False
         course_repository.create_course(rolenumber, course)
         return True
-         
-        
     def average_grade(self, username):
         ''' laskee opiskelijan keskiarvo
             Args:
@@ -141,8 +139,7 @@ class Services:
             summa += i["grade"]
         if len(courses) != 0:
             return summa/len(courses)
-        else:
-            return summa
+        return summa
     def show_diagram(self,username):
         array=self.find_course_by_username(username)
         array2=[]
@@ -175,7 +172,5 @@ class Services:
             summa += i["credit"]
         return summa
     def delete_course(self,name,rolenumber):
-       delete=course_repository.delete_course(name,rolenumber)
-       return delete
-       
-  
+        delete=course_repository.delete_course(name,rolenumber)
+        return delete
