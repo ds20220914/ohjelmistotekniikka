@@ -211,3 +211,15 @@ class TestService(unittest.TestCase):
         right4=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
         new.add_new_course(self.user_thir.role_number,self.course)
         new.show_diagram(self.user_thir.username)
+    def test_credit_sum(self):
+        new = Services()
+        right4=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        new.add_new_course(self.user_thir.role_number,self.course)
+        number=new.credit_sum(self.user_thir.username)
+        self.assertEqual(number,5)
+    def test_delete_course(self):
+        new = Services()
+        right4=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        new.add_new_course(self.user_thir.role_number,self.course)
+        right=new.delete_course(self.course.course_name,self.user_thir.role_number)
+        self.assertEqual(right,True)

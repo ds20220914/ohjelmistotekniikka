@@ -154,7 +154,7 @@ class Services:
             luku=array[i-1]["grade"]
             summa+=luku
             array2.append(summa/i)
-        plt.plot(array3,array2,"ro")
+        plt.plot(array3,array2,"r-")
         plt.ylabel('average grade')
         plt.xlabel("number of course")
         plt.axis([0,len(array2)+1,0,max(array2)+1])

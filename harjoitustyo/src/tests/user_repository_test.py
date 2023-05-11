@@ -32,3 +32,10 @@ class TestUser(unittest.TestCase):
         list = user_repository.find_by_username(user.username)
         sum = len(list)
         self.assertEqual(sum, 1)
+    def test_find_all(self):
+        user = User("moi1", "1234", "A2222")
+        user_repository.create(self.user_first)
+        user_repository.create(user)
+        list = user_repository.find_all()
+        sum = len(list)
+        self.assertEqual(sum, 2)

@@ -33,3 +33,12 @@ class TestCourse(unittest.TestCase):
         name = courses["Course_name"]
         print(name)
         self.assertEqual(name, "math")
+    def test_delete_course(self):
+        course_repository.create_course(self.role_number,self.course_first)
+        right=course_repository.delete_course(self.course_first.course_name,self.role_number)
+        list=course_repository.find_all_course_by_student_role_number(self.role_number)
+        length=len(list)
+        self.assertEqual(right, True)
+        self.assertEqual(length, 0)
+     
+
