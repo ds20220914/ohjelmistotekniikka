@@ -10,9 +10,10 @@ pakkaus service sisältää opintoseurantajärjestelmän sovelluslogiikka ja pal
 
 ## Käyttöliittymä
 
-Käyttöliittymä sisältää 4 erilaista näkymää
+Käyttöliittymä sisältää 5 erilaista näkymää
 
 - Kirjautuminen
+- Uuden käyttäjän luominen
 - Opiskelija näkee omat suoritukset
 - Opettaja lisää opiskelijalle suoritukset
 - Opettaja tarkistaa tietyn opiskelijan suoritukset
