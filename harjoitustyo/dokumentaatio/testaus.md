@@ -18,6 +18,7 @@ Tiedostojen nimet on konfiguroitu .env.test-tiedostoon. UserRepository-luokkaa t
 ### Testikattavuus
 
 Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen haarautumakattavuus on 99%
+![image](https://github.com/ds20220914/ohjelmistotekniikka/assets/123125841/c0ee8475-6997-4faf-8ae3-49fc3fce3b0f)
 
 Testaamatta jäivät build.py- ja config.py-tiedostojen suorittaminen komentoriviltä. Nämä olisi myös voinut jättää testikattavuuden ulkopuolelle. 
 
