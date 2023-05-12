@@ -33,6 +33,13 @@ Toiminnallisista kokonaisuuksista vastaa Services-luokka. Luokka tarjoaa käytt�
 - new_user(name, password, role_number)
 - find_by_rolenumber(rolenumber)
 - find_by_coursename_rolenumber(rolenumber, course_name)
+- login(self, username, password)
+- add_new_course(self, rolenumber, course)
+- average_grade(self, username)
+- show_diagram(self,username)
+-  credit_sum(self, username)
+-  delete_course(self,name,rolenumber)
+
 Services pysty hyödyntää käyttäjien ja kurssisuorituksien tietoja niiden tallennuksesta vastaavan pakkauksessa repositories sijaitsevien luokkien UserRepository ja CourseRepository kautta.
 
 ![image](https://user-images.githubusercontent.com/123125841/232852927-8929ff2e-c666-4fd2-9dc6-5b5e449fee65.png)
@@ -78,4 +85,8 @@ Kun "opettajat" ovat täydentänyt "oppilaan" rolenumber ja suoritustiedot, klik
 
 Tapahtumakäsittelijä kutsuu sovelluslogiikan metodi find_by_coursename_rolenumber, joka kutsuu CourseRepository:n metodi find_all_course_by_student_rolenumber ja palauttaa lista kyseisen oppilaan suoritustiedoista. Jos tämä uusi suoritustieto ei ole listassa, niin tapahtumakäsittelijä kutsuu sovelluslogiikasta add_new_course joka taas kutsuu CourseRepository:sta metodi create_course, joka lisää kyseisen oppilaan suoritustieto tietokantaan.  
 
- 
+### Kurssisuorituksen poistaminen
+
+"Oppilaiden" kurssisuorituksen poistaminen onnistuu ainoastaan "opettajilla". Suorituksen poistaminen onnistuu etsimällä kyseisen opiskelijan suoritukset ja painamalla "search".
+Kun "opettajat" ovat löytänyt kyseisen opiskelijan kaikki suoritustiedot, laitamalla suorituksen nimi ja painamalla "delete by coursename" niin poistaminen onnistuu:
+
