@@ -12,7 +12,7 @@ Opiskelijat ovat sovelluksen normaaleja käyttäjiä. Ja opettajat ovat pääkä
 
 ## Käyttöliittymäluonnos
 
-![](file:///home/shao/Pictures/Kuvakaappaukset/Kuvakaappaus%20-%202023-05-12%2020-09-25.png)
+![]()
 
 Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat siirtyä joko käyttäjän luomisnäkymään 
 tai kirjautua sisään. Kun opiskelijat ovat kirjautunut sisään, ne siirtyvät niiden suorituskokoelmaan joka sisältää
