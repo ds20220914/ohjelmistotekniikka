@@ -11,8 +11,7 @@ Opettajat voivat tarkistaa tietyn opiskelijan kaikki suoritukset sekä antaa opi
 Opiskelijat ovat sovelluksen normaaleja käyttäjiä. Ja opettajat ovat pääkäyttäjiä, joilla on suurempia oikeuksia. 
 
 ## Käyttöliittymäluonnos
-
-![]()
+![Kuvakaappaus - 2023-05-12 20-09-25](https://github.com/ds20220914/ohjelmistotekniikka/assets/123125841/cfe5650c-c38f-43b3-9ccf-ce23d50c1c43)
 
 Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat siirtyä joko käyttäjän luomisnäkymään 
 tai kirjautua sisään. Kun opiskelijat ovat kirjautunut sisään, ne siirtyvät niiden suorituskokoelmaan joka sisältää
