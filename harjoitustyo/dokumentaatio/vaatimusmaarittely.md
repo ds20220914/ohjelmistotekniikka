@@ -4,7 +4,7 @@
 
 Sovellus ylläpitää opiskelijoiden opiskelusuorituksia. Sovelluksen käyttäjät ovat opiskelijoita ja opettajia. 
 Kirjautumalla omalle tilille opiskelijat voivat nähdä kaikki suoritetut kurssit sekä opintopisteiden summan ja keskiarvon. 
-Opettajat voivat muokata opiskelijoiden kurssien tiloja sekä antaa opiskelijoille arvosanan kurssista.
+Opettajat voivat tarkistaa tietyn opiskelijan kaikki suoritukset sekä antaa opiskelijoille arvosanan kurssista.
 
 ## Käyttäjät
 
@@ -12,7 +12,7 @@ Opiskelijat ovat sovelluksen normaaleja käyttäjiä. Ja opettajat ovat pääkä
 
 ## Käyttöliittymäluonnos
 
-![](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/kuvat/Kuvakaappaus%20-%202023-03-23%2003-08-53.png)
+![](file:///home/shao/Pictures/Kuvakaappaukset/Kuvakaappaus%20-%202023-05-12%2020-09-25.png)
 
 Kun sovellus käynnistetään, kirjautumisnäkymä tulee esille. Käyttäjät voivat siirtyä joko käyttäjän luomisnäkymään 
 tai kirjautua sisään. Kun opiskelijat ovat kirjautunut sisään, ne siirtyvät niiden suorituskokoelmaan joka sisältää
@@ -34,9 +34,8 @@ käyttäjät voivat myös siirtyä setting-näkymään kun on kirjautunut sisä�
 
 ### Kirjautumisen jälkeen
 
-- Opiskelijat eli normaalit käyttäjät näkevät omat suoritustiedot "tehty"
-  - Painamalla "setting" normaalit käyttäjät pääsevät näkemään oman käyttäjätiedon. 
+- Opiskelijat eli normaalit käyttäjät näkevät omat suoritustiedot "tehty" 
 - Opettajat eli pääkäyttäjät voivat etsiä opiskelijanumeron avulla tietyn opiskelijan suoritustiedot ja muokkaa 
-  niitä(uuden kurssin lisääminen, kurssin arvosanan antaaminen). "tehty"
-  - Painamalla "setting" pääkäyttäjät pääsevät näkemään oman käyttäjätiedon. 
+  niitä(uuden kurssin lisääminen, kurssin arvosanan antaaminen). "tehty" 
 - käyttäjät voivat kirjautua ulos painamalla  "logout"."tehty" 
+- Opettajat voivat poistaa tietyn opiskelijan tiety suoritus. "tehty"

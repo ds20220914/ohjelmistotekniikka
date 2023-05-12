@@ -35,7 +35,7 @@ class UserRepository:
     def find_all(self):
         ''' palauttaa kaikkien käyttäjien tiedot
             Returns:
-                palauttaa jokaisen käyttäjän käyttäjätunnus,salasana ja roolinumero tupleina listassa
+                palauttaa jokaisen käyttäjän käyttäjätunnus,salasana ja roolinumero lista tupleina
         '''
         db_connection = self._connection1.cursor()
         lista = db_connection.execute("SELECT * FROM User ").fetchall()

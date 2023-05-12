@@ -54,7 +54,8 @@ class CourseRepository:
         return list(lista)
     def delete_course(self,name,rolenumber):
         cursor = self._connection2.cursor()
-        cursor.execute("delete from Course WHERE Role_number=? and Course_name=?",(rolenumber,name,))
+        cursor.execute("delete from Course WHERE Role_number=? and Course_name=?",
+            (rolenumber,name,))
         self._connection2.commit()
         return True
     def delete_all(self):
