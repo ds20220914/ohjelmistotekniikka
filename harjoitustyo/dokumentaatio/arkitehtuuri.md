@@ -89,4 +89,6 @@ Tapahtumakäsittelijä kutsuu sovelluslogiikan metodi find_by_coursename_rolenum
 
 "Oppilaiden" kurssisuorituksen poistaminen onnistuu ainoastaan "opettajilla". Suorituksen poistaminen onnistuu etsimällä kyseisen opiskelijan suoritukset ja painamalla "search".
 Kun "opettajat" ovat löytänyt kyseisen opiskelijan kaikki suoritustiedot, laitamalla suorituksen nimi ja painamalla "delete by coursename" niin poistaminen onnistuu:
+![image](https://github.com/ds20220914/ohjelmistotekniikka/assets/123125841/1f7339e1-a2ab-41b8-b7eb-14c20bdb6208)
 
+Tapahtumakäsittelijä kutsuu sovelluslogiikan metodi delete_course, joka kutuu CourseRepository:n metodi delete_course, joka poistaa kyseisen suoritus kyseisestä opiskelijasta, jos suoritus on olemassa. 
