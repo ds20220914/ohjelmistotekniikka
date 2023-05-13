@@ -12,11 +12,12 @@ class TestService(unittest.TestCase):
         self.user_sec=User("A_ope","1111","1111")
         self.user_thir=User("B_opi","2222","2222")
         self.course=Course("ma","5","5")
-
+        self.user_repository=user_repository
+        self.course_repository=course_repository
     def test_new_user(self):
         new = Services()
         right=new.new_user(self.user_first.username, self.user_first.password, self.user_first.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         number=len(list)
         print(number)
         self.assertEqual(number, 0)
@@ -25,7 +26,7 @@ class TestService(unittest.TestCase):
     def test_new_user1(self):
         new = Services()
         right=new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_by_username("A_ope")
         user=list[0]
         name=user["User_name"]
         self.assertEqual(name, "A_ope")
@@ -34,7 +35,7 @@ class TestService(unittest.TestCase):
     def test_new_user2(self):
         new = Services()
         right=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_by_username("B_opi")
         user=list[0]
         name=user["User_name"]
         self.assertEqual(name, "B_opi")
@@ -43,38 +44,38 @@ class TestService(unittest.TestCase):
         new = Services()
         user=User("","2222","2222")
         right=new.new_user(user.username, user.password, user.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         self.assertEqual(right,False)
     def test_new_user4(self):
         new = Services()
         user=User("A_ope","","2222")
         right=new.new_user(user.username, user.password, user.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         self.assertEqual(right,False)
     def test_new_user5(self):
         new = Services()
         user=User("A_ope","2222","")
         right=new.new_user(user.username, user.password, user.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         self.assertEqual(right,False)
     def test_new_user6(self):
         new = Services()
         user=User("B_opi","2222","2222")
         right=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
         right1=new.new_user(user.username, user.password, user.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         self.assertEqual(right1,False)
     def test_new_user7(self):
         new = Services()
         right=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
         right1=new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
-        list = user_repository.find_all()
+        list = self.user_repository.find_all()
         self.assertEqual(right1,True)
         self.assertEqual(right,True)
-    
+        self.assertEqual(len(list),2)
     def test_add_new_course1(self):
         new = Services()
-        new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         right=new.add_new_course(self.user_thir.role_number,self.course)
         list=new.find_course_by_username(self.user_thir.username)
         name=list[0]
@@ -92,7 +93,7 @@ class TestService(unittest.TestCase):
     def test_add_new_course3(self):
         course1=Course("ma","","5")
         new = Services()
-        new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         right=new.add_new_course(self.user_thir.role_number,course1)
         list=new.find_course_by_username(self.user_thir.username)
         number=len(list)
@@ -100,7 +101,7 @@ class TestService(unittest.TestCase):
     def test_add_new_course4(self):
         course1=Course("","5","5")
         new = Services()
-        new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         right=new.add_new_course(self.user_thir.role_number,course1)
         list=new.find_course_by_username(self.user_thir.username)
         number=len(list)
@@ -108,7 +109,7 @@ class TestService(unittest.TestCase):
     def test_add_new_course5(self):
         course1=Course("ma","5","")
         new = Services()
-        new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         right=new.add_new_course(self.user_thir.role_number,course1)
         list=new.find_course_by_username(self.user_thir.username)
         number=len(list)
@@ -116,13 +117,13 @@ class TestService(unittest.TestCase):
         
     def test_find_by_rolenumber(self):
         new = Services()
-        right=new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
+        self.user_repository.create(self.user_sec)
         right1=new.add_new_course(self.user_sec.role_number,self.course)
         list=new.find_by_rolenumber(self.user_sec.role_number)
         user=list[0]
         name=user["Course_name"]
         self.assertEqual(name, "ma")
-        self.assertEqual(right,True)
+       
         
     def test_find_by_coursename_rolenumber(self):
         new = Services()

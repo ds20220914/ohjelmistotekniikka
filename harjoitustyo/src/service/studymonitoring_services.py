@@ -40,9 +40,9 @@ class Services:
         number = None
         for i in rolenumber:
             number = i["role_number"]
-        lista = course_repository.find_all_course_by_student_role_number(
+        list1 = course_repository.find_all_course_by_student_role_number(
             number)
-        return lista
+        return list1
 
     def find_by_rolenumber(self, rolenumber):
         ''' etsi kurssien suoritustiedot roolinumero(opiskelijanumero) avulla
@@ -51,10 +51,10 @@ class Services:
             Returns:
                palauttaa käyttäjän jokaisen kurssin suoritustiedot tupleina listassa
         '''
-        lista = course_repository.find_all_course_by_student_role_number(
+        list1 = course_repository.find_all_course_by_student_role_number(
             rolenumber)
 
-        return lista
+        return list1
 
     def find_by_coursename_rolenumber(self, rolenumber, course_name):
         ''' etsi onko tietty opiskelijan tietyn kurssin suoritustieto jo olemassa tietokannassa

@@ -34,3 +34,9 @@
 - docstring lisätty
 - käyttöohjeet lisätty
 - ohjelma logiikka lisätty
+
+## Viikko 7
+- integroitut testit
+- diagrami käyttöön
+- koodin laadun lisääminen
+- dokumentaatioiden viimeistelyt

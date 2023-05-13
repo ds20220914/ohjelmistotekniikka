@@ -13,5 +13,8 @@
 |29.4 | 3 tuntia | "oppilaan" keskiarvo ja opintopisteet|
 |30.4 | 4 tuntia | docstring ja käyttöohje|
 |1.5 | 2 tuntia | enemmän testi ja pylint virheitä korjattu|
+|5.5 | 4 tuntia | käyttöohje ja diagrami|
+|12.5 | 6 tuntia | integroitut testit lisää|
+|13.5 | 5 tuntia | viimeistelyt dokumetaatiossa ja testeissä, koodin laatuissa|
 
-yhteismäärä  50 tuntia
+yhteismäärä  61 tuntia

@@ -38,8 +38,8 @@ class UserRepository:
                 palauttaa jokaisen käyttäjän käyttäjätunnus,salasana ja roolinumero lista tupleina
         '''
         db_connection = self._connection1.cursor()
-        lista = db_connection.execute("SELECT * FROM User ").fetchall()
-        return list(lista)
+        list1 = db_connection.execute("SELECT * FROM User ").fetchall()
+        return list(list1)
 
     def find_by_username(self, username):
         ''' palauttaa käyttäjän käyttäjätunnus, salasana ja roolinumero käyttäjänimen avulla
@@ -49,9 +49,9 @@ class UserRepository:
                 palauttaa tuplena käyttäjän käyttäjätunnus, salasana ja roolinumero
         '''
         db_connection = self._connection1.cursor()
-        lista = db_connection.execute(
+        list1 = db_connection.execute(
             "SELECT * FROM User WHERE User_name=?", (username,)).fetchall()
-        return lista
+        return list1
 
     def delete_all(self):
         ''' poistaa kaikki käyttäjät'''
