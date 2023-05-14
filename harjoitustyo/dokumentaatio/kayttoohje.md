@@ -39,7 +39,8 @@ Kun "opettaja" on onnistunut kirjautumaan sisään, hän voi lisätä tietylle o
 Painamalla "Add new course" "opettaja" siirtyy suorituksen lisäämisnäkymään. 
 ![Kuvakaappaus - 2023-05-02 20-49-26](https://user-images.githubusercontent.com/123125841/235744888-20d8987c-4a27-49cf-91b3-1f492661f5cf.png)
 
-Kun "opettaja" on täytänyt suoritustiedot sekä suorittajan opiskelijanumero, painamalla "Add course performance" suoritus tallentuu tietokantaan. 
+Kun "opettaja" on täytänyt suoritustiedot sekä suorittajan opiskelijanumero, painamalla "Add course performance" suoritus tallentuu tietokantaan.
+Jos opiskelijan suoritus on hylätty, suorituksen opintopiste ja arvosana annetaan 0. 
 ![Kuvakaappaus - 2023-05-02 20-39-03](https://user-images.githubusercontent.com/123125841/235744244-dc722656-af60-4870-9287-ab75927160e9.png)
 
 Kun "opettaja" on kirjautunut sisään, hän voi myös tarkista tietyn opiskelijan kaikki suoritustiedot, täytämällä opiskelijanumero ja painalla "search".
