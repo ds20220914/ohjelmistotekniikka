@@ -57,9 +57,9 @@ class UI:
             self._current_view.pack()
         if number2==3:
             right = False
-            if luku2 != 1 and luku2 != 2:
+            if number2 != 1 and number2 != 2:
                 self._current_view = LoginView(
-                    self._root, self.close_login_view, self.create_user_view, oikea)
+                    self._root, self.close_login_view, self.create_user_view, right)
 
                 self._current_view.pack()
 
