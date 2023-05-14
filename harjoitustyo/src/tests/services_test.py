@@ -197,7 +197,7 @@ class TestService(unittest.TestCase):
         self.assertEqual(right,3)
     def test_average_grade(self):
         new = Services()
-        right4=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         new.add_new_course(self.user_thir.role_number,self.course)
         luku=new.average_grade(self.user_thir.username)
         self.assertEqual(luku,5)
@@ -220,6 +220,6 @@ class TestService(unittest.TestCase):
     def test_delete_course(self):
         new = Services()
         right4=new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
-        new.add_new_course(self.user_thir.role_number,self.course)
+        self.course_repository.create_course(self.user_thir.role_number,self.course)
         right=new.delete_course(self.course.course_name,self.user_thir.role_number)
         self.assertEqual(right,True)
