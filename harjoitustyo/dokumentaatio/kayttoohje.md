@@ -51,6 +51,10 @@ Kun "opettaja" on kirjautunut sisään, hän voi myös tarkista tietyn opiskelij
 Kun "opiskelija" on onnistunut kirjautumaan sisään, hän näkee kaikki hänen suoritustiedot, keskiarvo sekä opintopisteiden summa. 
 ![Kuvakaappaus - 2023-05-02 20-41-00](https://user-images.githubusercontent.com/123125841/235744626-59ebefd4-267c-4ee5-8b30-dd4dad62255f.png)
 
+## oman suorituksen diagrammi
+![image](https://github.com/ds20220914/ohjelmistotekniikka/assets/123125841/8d2df9f0-f02b-4e97-abcf-fe97230cb129)
+Opiskelija näkee myös oman suorituksien keskiarvon diagrammi painamalle "show average grade diagram".
+
 
 ## Ulos kirjautuminen
 
