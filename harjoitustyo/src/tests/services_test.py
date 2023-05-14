@@ -157,7 +157,7 @@ class TestService(unittest.TestCase):
         self.assertEqual(right3,False)
     def test_login(self):
         new = Services()
-        new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
+        self.user_repository.create(self.user_sec)
         right=new.login(self.user_sec.username, self.user_sec.password)
         self.assertEqual(right,1)
     def test_login1(self):
@@ -170,7 +170,7 @@ class TestService(unittest.TestCase):
         self.assertEqual(right,3)
     def test_login3(self):
         new = Services()
-        new.new_user(self.user_thir.username, self.user_thir.password, self.user_thir.role_number)
+        self.user_repository.create(self.user_thir)
         right=new.login(self.user_sec.username, self.user_sec.password)
         self.assertEqual(right,3)
     def test_login4(self):
@@ -185,14 +185,14 @@ class TestService(unittest.TestCase):
         self.assertEqual(right2,3)
     def test_login5(self):
         new = Services()
-        new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
+        self.user_repository.create(self.user_sec)
         right=new.login(self.user_sec.username, '')
         right1=new.login('', self.user_sec.password)
         self.assertEqual(right,3)
         self.assertEqual(right1,3)
     def test_login5(self):
         new = Services()
-        new.new_user(self.user_sec.username, self.user_sec.password, self.user_sec.role_number)
+        self.user_repository.create(self.user_sec)
         right=new.login(self.user_thir.username, self.user_thir.password)
         self.assertEqual(right,3)
     def test_average_grade(self):
