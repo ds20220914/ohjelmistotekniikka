@@ -22,6 +22,9 @@ Rooleja on "oppilas" ja "opettaja".
 
 [Testaus](https://github.com/ds20220914/ohjelmistotekniikka/blob/main/harjoitustyo/dokumentaatio/testaus.md)
 
+Ohjelma käyttää Poetry-komentorivityökalua, joten aina tulisi suorittaa *poetry shell* komentoa komentorivissä(missä pyproject.toml tiedosto sijaitsee) 
+ennen ohjelman asennus tai käynnistys. 
+
 # Asennus
 
 ### 1. Asenna riippuvuuden komennolla harjoitustyo-alihakemistossa:

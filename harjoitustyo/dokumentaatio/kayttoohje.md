@@ -30,7 +30,7 @@ Kirjautumisnäkymästä on myös mahdollista siirtyä käyttäjän luomisnäkym�
 ![Kuvakaappaus - 2023-05-02 20-36-26](https://user-images.githubusercontent.com/123125841/235743681-586c1925-d251-4221-9e35-6d6f04a31145.png)
 
 Uusi käyttäjä luodaan syöttämällä ohjeen mukaan oikeita tietoja syötekenttiin ja painamalla "Register".
-
+(Role number eli roolinumero on sinun opiskelijanumero tai opettajanumero)
 Jos luominen onnistuu, siirrytään kirjautumisnäkymään. 
 
 ## Suorituksen lisääminen opiskelijalle sekä opiskelijan suorituksien tarkistaminen (opettajat)
