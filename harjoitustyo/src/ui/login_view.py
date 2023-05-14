@@ -3,7 +3,7 @@ from tkinter import ttk, constants
 
 class LoginView:
     '''Käyttäjän kirjautumisesta vastaava näkymä.'''
-    def __init__(self, root, close_login_view, create_user_view, oikea):
+    def __init__(self, root, close_login_view, create_user_view, right):
         """Luokan konstruktori. Luo uuden kirjautumisnäkymän.
            Args:
                 root:
@@ -13,14 +13,14 @@ class LoginView:
                 create_user_view:
                     Kutsuttava arvo, joka kutsutaan kun käyttäjä siirrytään uuden 
                     käyttäjän luomisnäkymään.
-                oikea:
+                right:
                     Joko False tai True, jos on False niin esitää virheilmoitus. 
         """
         
         self._root = root
         self._close_login_view = close_login_view
         self._create_user_view = create_user_view
-        self.oikea = oikea
+        self.right = right
         self._frame = None
         self.username_entry = None
         self.password_entry = None
@@ -60,7 +60,7 @@ class LoginView:
                    sticky=(constants.E, constants.W))
         create.grid(row=4, column=0, columnspan=2,
                     sticky=(constants.E, constants.W))
-        if self.oikea == False:
+        if self.right == False:
             error_label = ttk.Label(master=self._frame, text="Login error")
             error_label.grid(row=5, column=0, sticky=(
                 constants.E, constants.W))

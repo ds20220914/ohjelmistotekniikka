@@ -26,8 +26,8 @@ class UI:
 
     def start(self):
         ''' käynnistää käyttöliittymä'''
-        oikea = True
-        self.start_login_view(oikea)
+        right = True
+        self.start_login_view(right)
 
     def close_login_view(self):
         ''' tarkistaa käyttäjänimen perusteella, onko käyttäjä opettaja vai oppilas.
@@ -40,23 +40,23 @@ class UI:
         password = self._current_view.password_entry.get()
 
         self._current_view.destroy()
-        luku = Services()
-        luku2 = luku.login(username, password)
-        oikea = None
-        if luku2 == 1:
-            oikea = True
+        number = Services()
+        number2 = number.login(username, password)
+        right = None
+        if number2 == 1:
+            right = True
             self._current_view = TeacherView(
                 self._root, self.check_student, self.add_new_course, self.logout)
 
             self._current_view.pack()
-        if luku2 == 2:
-            oikea = True
+        if number2 == 2:
+            right = True
             self._current_view = StudentView(
                 self._root, self.logout, username,self.diagram)
 
             self._current_view.pack()
-        if luku2==3:
-            oikea = False
+        if number2==3:
+            right = False
             if luku2 != 1 and luku2 != 2:
                 self._current_view = LoginView(
                     self._root, self.close_login_view, self.create_user_view, oikea)
@@ -72,19 +72,19 @@ class UI:
         ''' kirjautuu ulos, ja kutsuu sisäänkirjautumisnäkymä,
             jossa ei ole virheilmoitus.
         '''
-        oikea = True
+        right = True
         self._current_view.destroy()
-        self.start_login_view(oikea)
+        self.start_login_view(right)
 
-    def start_login_view(self, oikea):
+    def start_login_view(self, right):
         ''' käynnistää käyttöliittymä
             Args:
-               oikea= False jos sisäänkirjautuminen epäonnistui, ja käyttöliittymä antaa virhe ilmoitus
+               right= False jos sisäänkirjautuminen epäonnistui, ja käyttöliittymä antaa virhe ilmoitus
                       True jos sisäänkirjautuminen onnistui
         '''
-        oikea = True
+        right = True
         self._current_view = LoginView(
-            self._root, self.close_login_view, self.create_user_view, oikea)
+            self._root, self.close_login_view, self.create_user_view, right)
 
         self._current_view.pack()
 

@@ -167,10 +167,10 @@ class Services:
         rolenumber = lista[0]["role_number"]
         courses = course_repository.find_all_course_by_student_role_number(
             rolenumber)
-        summa = 0
+        summ = 0
         for i in courses:
-            summa += i["credit"]
-        return summa
+            summ += i["credit"]
+        return summ
     def delete_course(self,name,rolenumber):
         delete=course_repository.delete_course(name,rolenumber)
         return delete
